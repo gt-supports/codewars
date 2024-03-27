@@ -12,3 +12,4 @@ def middle_me(N, X, Y):
 
 
 middle_me(18, 'z', '#')
+# Ruslan comment
