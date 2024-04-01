@@ -12,3 +12,4 @@ def validate_word(word):
     counts = list(dict.values())
     return all(count == counts[0] for count in counts)
 
+#comment
