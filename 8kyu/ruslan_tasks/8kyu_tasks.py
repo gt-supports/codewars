@@ -13,3 +13,6 @@ def basic_op(operator, value1, value2):
 
 def remove_exclamation_marks(s):
     return s.replace('!', '')
+
+def zero_fuel(distance_to_pump, mpg, fuel_left):
+    return mpg * fuel_left >= distance_to_pump
