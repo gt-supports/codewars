@@ -9,3 +9,7 @@ def basic_op(operator, value1, value2):
         return value1*value2
     elif operator == "/":
         return value1 / value2
+
+
+def remove_exclamation_marks(s):
+    return s.replace('!', '')
