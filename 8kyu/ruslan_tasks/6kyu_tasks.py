@@ -67,3 +67,9 @@ def likes(names):
 # https://www.codewars.com/kata/54b42f9314d9229fd6000d9c
 def duplicate_encode(word):
     return "".join(["(" if word.lower().count(c) == 1 else ")" for c in word.lower()])
+
+
+# https://www.codewars.com/kata/54da539698b8a2ad76000228/train/python
+# 2024-04-04
+def is_valid_walk(walk):
+    return walk.count('n') == walk.count('s') and walk.count('w') == walk.count('e') and len(walk) == 10
