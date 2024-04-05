@@ -32,3 +32,10 @@ reverse_words("double  spaced")
 def set_alarm(employed, vacation):
     return employed and not vacation
 
+# https://www.codewars.com/kata/5772da22b89313a4d50012f7/train/python
+def greet(name, owner):
+    return "Hello boss" if name == owner else "Hello guest"
+
+# https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0/train/python
+def remove_char(s):
+    return ''.join(list(s)[1:-1:1])

@@ -73,3 +73,15 @@ def duplicate_encode(word):
 # 2024-04-04
 def is_valid_walk(walk):
     return walk.count('n') == walk.count('s') and walk.count('w') == walk.count('e') and len(walk) == 10
+
+
+# https://www.codewars.com/kata/578aa45ee9fd15ff4600090d/train/python
+def sort_array(source_array):
+    odd_arr = sorted([num for num in source_array if num % 2 == 1])
+    print(odds)
+    odd_index = 0
+    for i in range(len(source_array)):
+        if source_array[i] % 2 == 1:
+            source_array[i] = odd_arr[odd_index]
+            odd_index += 1
+    return source_array
