@@ -8,3 +8,5 @@ def row_weights(array):
     team1 = sum(array[::2])
     team2 = sum(array[1::2])
     return (team1, team2)
+
+
