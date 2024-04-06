@@ -10,3 +10,14 @@ def row_weights(array):
     return (team1, team2)
 
 
+# https://www.codewars.com/kata/5982619d2671576e90000017/solutions/python?filter=me&sort=best_practice&invalids=false
+def sponge_meme(s):
+    result = ""
+
+    for index, character in enumerate(s):
+        if index % 2 == 0:
+            result += character.upper()
+        else:
+            result += character.lower()
+
+    return result
