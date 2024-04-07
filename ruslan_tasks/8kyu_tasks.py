@@ -27,3 +27,7 @@ def reverse_words(text):
     return ' '.join([''.join(list(words)[::-1]) for words in text.split()])
 # haven't finished yet
 reverse_words("double  spaced")
+
+# https://www.codewars.com/kata/5513795bd3fafb56c200049e/train/python
+def count_by(x, n):
+    return [ x*(i+1) for i in range(n)]
