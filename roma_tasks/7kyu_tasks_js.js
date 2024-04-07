@@ -30,3 +30,8 @@ const paintLetterboxes = function (start, end) {
     return arr
 }
 
+// https://www.codewars.com/kata/557af4c6169ac832300000ba/train/javascript
+function removeRotten(bagOfFruits) {
+    return bagOfFruits && bagOfFruits.length > 0 ? bagOfFruits.map(el => el.slice(0, 6) == 'rotten'
+        ? (el.slice(6)).toLowerCase() : el) : []
+}
