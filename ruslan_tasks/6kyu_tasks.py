@@ -73,3 +73,14 @@ def duplicate_encode(word):
 # 2024-04-04
 def is_valid_walk(walk):
     return walk.count('n') == walk.count('s') and walk.count('w') == walk.count('e') and len(walk) == 10
+
+
+# https://www.codewars.com/kata/5544c7a5cb454edb3c000047/train/python
+def bouncing_ball(h, bounce, window):
+    if h > 0 and 0 < bounce < 1 and window < h:
+        i = 0
+        while h * bounce ** i > window:
+            i += 1
+        return 2*i-1
+    else:
+        return -1
