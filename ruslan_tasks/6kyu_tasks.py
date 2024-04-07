@@ -84,3 +84,12 @@ def bouncing_ball(h, bounce, window):
         return 2*i-1
     else:
         return -1
+
+# https://www.codewars.com/kata/5592e3bd57b64d00f3000047/train/python
+def find_nb(m):
+    n = 0
+    sum = 0
+    while sum < m:
+        sum += (n+1)**3
+        n += 1
+    return n if sum == m else -1
