@@ -21,3 +21,10 @@ def sponge_meme(s):
             result += character.lower()
 
     return result
+
+
+# https://www.codewars.com/kata/557af4c6169ac832300000ba/solutions/python?filter=me&sort=best_practice&invalids=false
+def remove_rotten(bag_of_fruits):
+    if bag_of_fruits:
+        return [el[6:].lower() if el[:6] == 'rotten' else el for el in bag_of_fruits]
+    return []

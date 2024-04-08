@@ -30,3 +30,27 @@ const paintLetterboxes = function (start, end) {
     return arr
 }
 
+// https://www.codewars.com/kata/557af4c6169ac832300000ba/train/javascript
+function removeRotten(bagOfFruits) {
+    return bagOfFruits && bagOfFruits.length > 0 ? bagOfFruits.map(el => el.slice(0, 6) == 'rotten'
+        ? (el.slice(6)).toLowerCase() : el) : []
+}
+
+//https://www.codewars.com/kata/5558cc216a7a231ac9000022/solutions/javascript?filter=me&sort=best_practice&invalids=false
+function duplicates(arr) {
+    const map = new Map();
+    const finalArr = [];
+
+    for (const el of arr) {
+        if (map.has(el)) {
+            if (map.get(el) === 1) {
+                finalArr.push(el);
+            }
+            map.set(el, map.get(el) + 1);
+        } else {
+            map.set(el, 1);
+        }
+    }
+
+    return finalArr;
+}
