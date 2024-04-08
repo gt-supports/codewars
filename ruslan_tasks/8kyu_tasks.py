@@ -28,6 +28,37 @@ def reverse_words(text):
 # haven't finished yet
 reverse_words("double  spaced")
 
+
+# https://www.codewars.com/kata/568dcc3c7f12767a62000038/train/python
+def set_alarm(employed, vacation):
+    return employed and not vacation
+
+# https://www.codewars.com/kata/5772da22b89313a4d50012f7/train/python
+def greet(name, owner):
+    return "Hello boss" if name == owner else "Hello guest"
+
+
+
 # https://www.codewars.com/kata/5513795bd3fafb56c200049e/train/python
 def count_by(x, n):
     return [ x*(i+1) for i in range(n)]
+
+
+# https://www.codewars.com/kata/55cbc3586671f6aa070000fb/train/python?
+def check_for_factor(base, factor):
+    return True if base % factor == 0 else False
+
+
+# https://www.codewars.com/kata/55fd2d567d94ac3bc9000064/train/python
+def row_sum_odd_numbers(n):
+    start = 1+sum([2*x for x in range(n)])
+    finish = 1+sum([2 * x+2 for x in range(n)][1:])
+    arr_sum = sum([x for x in range(finish+1)][start:finish+1:2])
+    return arr_sum
+
+
+def sum_array(arr):
+    return sum(sorted(arr)[1:-1]) if  arr != None else 0
+
+def correct(s):
+    return s.replace("5", "S").replace("0", "O").replace("1", "I")

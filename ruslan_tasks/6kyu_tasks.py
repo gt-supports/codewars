@@ -93,3 +93,18 @@ def find_nb(m):
         sum += (n+1)**3
         n += 1
     return n if sum == m else -1
+
+# https://www.codewars.com/kata/57eb8fcdf670e99d9b000272/train/python
+def high(x):
+    arr = []
+    for word in x.split():
+        weight = 0
+        for letter in word:
+            weight += ord(letter)-96
+        arr.append(weight)
+    max_weight_index = [x for x in range(len(arr)) if arr[x] == max(arr)][0]
+    return x.split()[max_weight_index]
+
+
+
+high("man i need a taxi up to ubud")
