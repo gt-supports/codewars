@@ -28,3 +28,17 @@ def remove_rotten(bag_of_fruits):
     if bag_of_fruits:
         return [el[6:].lower() if el[:6] == 'rotten' else el for el in bag_of_fruits]
     return []
+
+
+# https://www.codewars.com/kata/57d532d2164a67cded0001c7/solutions/python?filter=me&sort=best_practice&invalids=false
+
+def histogram(results):
+    histogram = ""
+    for value in range(6, 0, -1):
+        count = results[value - 1]
+        line = f"{value}|{'#' * count}"
+        if count > 0:
+            line += f" {count}"
+        line += "\n"
+        histogram += line
+    return histogram
