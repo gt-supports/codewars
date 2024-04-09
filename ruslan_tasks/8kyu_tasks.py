@@ -77,3 +77,7 @@ def get_grade(s1, s2, s3):
         return "D"
     elif 0 <= average < 60:
         return "F"
+
+# https://www.codewars.com/kata/55f73be6e12baaa5900000d4/train/python
+def goals(laLiga, copaDelRey, championsLeague):
+    return laLiga + copaDelRey + championsLeague
