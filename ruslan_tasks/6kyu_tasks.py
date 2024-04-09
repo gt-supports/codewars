@@ -73,3 +73,66 @@ def duplicate_encode(word):
 # 2024-04-04
 def is_valid_walk(walk):
     return walk.count('n') == walk.count('s') and walk.count('w') == walk.count('e') and len(walk) == 10
+
+
+# https://www.codewars.com/kata/5544c7a5cb454edb3c000047/train/python
+def bouncing_ball(h, bounce, window):
+    if h > 0 and 0 < bounce < 1 and window < h:
+        i = 0
+        while h * bounce ** i > window:
+            i += 1
+        return 2*i-1
+    else:
+        return -1
+
+# https://www.codewars.com/kata/5592e3bd57b64d00f3000047/train/python
+def find_nb(m):
+    n = 0
+    sum = 0
+    while sum < m:
+        sum += (n+1)**3
+        n += 1
+    return n if sum == m else -1
+
+# https://www.codewars.com/kata/57eb8fcdf670e99d9b000272/train/python
+def high(x):
+    arr = []
+    for word in x.split():
+        weight = 0
+        for letter in word:
+            weight += ord(letter)-96
+        arr.append(weight)
+    max_weight_index = [x for x in range(len(arr)) if arr[x] == max(arr)][0]
+    return x.split()[max_weight_index]
+
+
+# https://www.codewars.com/kata/57b06f90e298a7b53d000a86/train/python
+def queue_time(customers, n):
+    if n == 1:
+        return sum(customers)
+    elif n >= len(customers):
+        return max(customers)
+    else:
+        queue_arr = []
+        new_arr = customers[::-1]
+        for i in range(n):
+            queue_arr.append(new_arr.pop())
+        cust_len = len(new_arr)
+        queue_arr_len = len(queue_arr)
+        queue = 0
+        while cust_len > 0 or queue_arr_len > 0:
+            min_arr = min(queue_arr)
+            queue_arr = [x-min_arr for x in queue_arr]
+            queue += min_arr
+            queue_arr.remove(0)
+            queue_arr_len -= 1
+            for i in range(n - len(queue_arr)):
+                if len(new_arr) > 0:
+                    queue_arr.append(new_arr.pop())
+                    queue_arr_len += 1
+                    cust_len -= 1
+        return queue
+
+
+
+queue_time([1, 2, 3, 4, 5], 3)
