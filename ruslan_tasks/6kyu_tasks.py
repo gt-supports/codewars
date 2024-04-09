@@ -106,5 +106,33 @@ def high(x):
     return x.split()[max_weight_index]
 
 
+# https://www.codewars.com/kata/57b06f90e298a7b53d000a86/train/python
+def queue_time(customers, n):
+    if n == 1:
+        return sum(customers)
+    elif n >= len(customers):
+        return max(customers)
+    else:
+        queue_arr = []
+        new_arr = customers[::-1]
+        for i in range(n):
+            queue_arr.append(new_arr.pop())
+        cust_len = len(new_arr)
+        queue_arr_len = len(queue_arr)
+        queue = 0
+        while cust_len > 0 or queue_arr_len > 0:
+            min_arr = min(queue_arr)
+            queue_arr = [x-min_arr for x in queue_arr]
+            queue += min_arr
+            queue_arr.remove(0)
+            queue_arr_len -= 1
+            for i in range(n - len(queue_arr)):
+                if len(new_arr) > 0:
+                    queue_arr.append(new_arr.pop())
+                    queue_arr_len += 1
+                    cust_len -= 1
+        return queue
 
-high("man i need a taxi up to ubud")
+
+
+queue_time([1, 2, 3, 4, 5], 3)
