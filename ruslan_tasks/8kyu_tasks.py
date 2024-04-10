@@ -81,3 +81,21 @@ def get_grade(s1, s2, s3):
 # https://www.codewars.com/kata/55f73be6e12baaa5900000d4/train/python
 def goals(laLiga, copaDelRey, championsLeague):
     return laLiga + copaDelRey + championsLeague
+
+# https://www.codewars.com/kata/5808dcb8f0ed42ae34000031/train/python
+def switch_it_up(number):
+    d = {
+        0: 'Zero',
+        1: 'One',
+        2: 'Two',
+        3: 'Three',
+        4: 'Four',
+        5: 'Five',
+        6: 'Six',
+        7: 'Seven',
+        8: 'Eight',
+        9: 'Nine'
+    }
+    return d[number]
+
+switch_it_up(2)
