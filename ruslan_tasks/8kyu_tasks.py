@@ -19,14 +19,7 @@ def zero_fuel(distance_to_pump, mpg, fuel_left):
     return mpg * fuel_left >= distance_to_pump
 
 # https://www.codewars.com/kata/5259b20d6021e9e14c0010d4/train/python
-def reverse_words(text):
-    print( ' '.join([''.join(list(words)[::-1]) for words in text.split()]))
-    print(''.join([words for words in list(text) if words.isalpha()]))
-    print(' '.join([''.join(list(words)[::-1]) for words in text.split()]))
-    print(' '.join([''.join(list(words)[::-1]) for words in text.split()]))
-    return ' '.join([''.join(list(words)[::-1]) for words in text.split()])
-# haven't finished yet
-reverse_words("double  spaced")
+
 
 
 # https://www.codewars.com/kata/568dcc3c7f12767a62000038/train/python
