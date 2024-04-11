@@ -19,14 +19,7 @@ def zero_fuel(distance_to_pump, mpg, fuel_left):
     return mpg * fuel_left >= distance_to_pump
 
 # https://www.codewars.com/kata/5259b20d6021e9e14c0010d4/train/python
-def reverse_words(text):
-    print( ' '.join([''.join(list(words)[::-1]) for words in text.split()]))
-    print(''.join([words for words in list(text) if words.isalpha()]))
-    print(' '.join([''.join(list(words)[::-1]) for words in text.split()]))
-    print(' '.join([''.join(list(words)[::-1]) for words in text.split()]))
-    return ' '.join([''.join(list(words)[::-1]) for words in text.split()])
-# haven't finished yet
-reverse_words("double  spaced")
+
 
 
 # https://www.codewars.com/kata/568dcc3c7f12767a62000038/train/python
@@ -81,3 +74,25 @@ def get_grade(s1, s2, s3):
 # https://www.codewars.com/kata/55f73be6e12baaa5900000d4/train/python
 def goals(laLiga, copaDelRey, championsLeague):
     return laLiga + copaDelRey + championsLeague
+
+# https://www.codewars.com/kata/5808dcb8f0ed42ae34000031/train/python
+def switch_it_up(number):
+    d = {
+        0: 'Zero',
+        1: 'One',
+        2: 'Two',
+        3: 'Three',
+        4: 'Four',
+        5: 'Five',
+        6: 'Six',
+        7: 'Seven',
+        8: 'Eight',
+        9: 'Nine'
+    }
+    return d[number]
+
+switch_it_up(2)
+
+# https://www.codewars.com/kata/555086d53eac039a2a000083/train/python
+def lovefunc( flower1, flower2 ):
+    return (flower1 + flower2) % 2 == 1
