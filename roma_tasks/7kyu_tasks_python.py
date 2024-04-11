@@ -47,3 +47,14 @@ def histogram(results):
 # https://www.codewars.com/kata/5656b6906de340bd1b0000ac/solutions/python?filter=me&sort=best_practice&invalids=false
 def longest(a1, a2):
     return "".join(sorted(set(a1 + a2)))
+
+
+# https://www.codewars.com/kata/56541980fa08ab47a0000040/solutions/python?filter=me&sort=best_practice&invalids=false
+def printer_error(s):
+    k = 0
+
+    for char in s:
+        if char > 'm' or char < 'a':
+            k += 1
+
+    return f"{k}/{len(s)}"
