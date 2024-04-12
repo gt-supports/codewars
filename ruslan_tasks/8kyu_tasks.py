@@ -96,3 +96,20 @@ switch_it_up(2)
 # https://www.codewars.com/kata/555086d53eac039a2a000083/train/python
 def lovefunc( flower1, flower2 ):
     return (flower1 + flower2) % 2 == 1
+
+# https://www.codewars.com/kata/55d24f55d7dd296eb9000030/python
+def summation(num):
+    return sum([n for n in range(num+1)])
+
+
+# https://www.codewars.com/kata/5556282156230d0e5e000089/train/python
+
+def dna_to_rna(dna):
+    return dna.replace("T", "U")
+
+# https://www.codewars.com/kata/577a98a6ae28071780000989/train/python
+def minimum(arr):
+    return min(arr)
+
+def maximum(arr):
+    return max(arr)

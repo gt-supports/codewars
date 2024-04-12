@@ -56,5 +56,7 @@ def reverse_words(text):
     # print(''.join([''.join(list(words)[::-1]) for words in gen_arr]))
     return ''.join([''.join(list(words)[::-1]) for words in gen_arr])
 
-# haven't finished yet
-reverse_words("a b c d")
+# https://www.codewars.com/kata/57f609022f4d534f05000024/train/python
+def stray(arr):
+    return [arr[i] for i in range(len(arr)) if arr[i] != arr[i-1] and arr[i] != arr[i-2]][0]
+
