@@ -117,3 +117,7 @@ def maximum(arr):
 # https://www.codewars.com/kata/53da3dbb4a5168369a0000fe/train/python
 def even_or_odd(number):
     return "Even" if number % 2 == 0 else "Odd"
+
+# https://www.codewars.com/kata/58261acb22be6e2ed800003a/train/python
+def get_volume_of_cuboid(length, width, height):
+    return length * width * height

@@ -149,5 +149,10 @@ def wave(people):
 def solution(s):
     return ''.join([" " + letter  if letter.isupper() else letter for letter in list(s) ])
 
+# https://www.codewars.com/kata/55c45be3b2079eccff00010f/train/python
+def order(sentence):
+  # code here
+  return
 
-solution("breakCamelCase")
+
+order("is2 Thi1s T4est 3a")
