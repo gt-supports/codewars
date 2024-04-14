@@ -121,3 +121,30 @@ def even_or_odd(number):
 # https://www.codewars.com/kata/58261acb22be6e2ed800003a/train/python
 def get_volume_of_cuboid(length, width, height):
     return length * width * height
+
+# https://www.codewars.com/kata/55cb632c1a5d7b3ad0000145/train/python
+def hoop_count(n):
+    return "Great, now move on to tricks" if n>=10 else "Keep at it until you get it"
+
+# https://www.codewars.com/kata/57cc975ed542d3148f00015b/train/python
+def check(seq, elem):
+     return elem in seq
+
+# https://www.codewars.com/kata/59ca8246d751df55cc00014c/train/python
+def hero(bullets, dragons):
+    return True if bullets / (2 * dragons) >=1 else False
+
+# https://www.codewars.com/kata/53dc54212259ed3d4f00071c/train/python
+def sum_array(a):
+    return sum(a)
+
+# https://www.codewars.com/kata/56b1f01c247c01db92000076/python
+def double_char(s):
+    return ''.join([2 * letter for letter in s])
+
+# https://www.codewars.com/kata/56efc695740d30f963000557/python
+def to_alternating_case(string):
+    return ''.join([letter.upper() if letter.islower() else letter.lower() for letter in string])
+
+
+to_alternating_case('HeLLo WoRLD')
