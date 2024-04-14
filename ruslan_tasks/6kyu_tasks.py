@@ -166,3 +166,16 @@ def order(sentence):
 
 
 order("is2 Thi1s T4est 3a")
+
+# https://www.codewars.com/kata/5626b561280a42ecc50000d1/python
+def sum_dig_pow(a, b): # range(a, b + 1) will be studied by the function
+    my_arr = []
+    for i in range(a, b+1):
+        check = 0
+        for j in range(len(str(i))):
+            check += int(str(i)[j])**(j+1)
+        if check == i:
+            my_arr.append(i)
+    return my_arr
+
+sum_dig_pow(1,200 )
