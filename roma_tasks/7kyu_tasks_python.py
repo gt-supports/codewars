@@ -69,3 +69,11 @@ def binary_array_to_number(arr):
 # https://www.codewars.com/kata/559590633066759614000063/train/python
 def min_max(lst):
     return [min(lst), max(lst)]
+
+
+# https://www.codewars.com/kata/55d1d6d5955ec6365400006d/train/python
+import math
+
+
+def round_to_next5(n):
+    return math.ceil(n / 5) * 5
