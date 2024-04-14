@@ -151,8 +151,18 @@ def solution(s):
 
 # https://www.codewars.com/kata/55c45be3b2079eccff00010f/train/python
 def order(sentence):
-  # code here
-  return
+    # print(sorted(sentence.split(), key = lambda word: sorted(word))) не понял
+    keys = []
+    for word in sentence.split(" "):
+        for symbol in word:
+            if symbol.isdigit():
+                keys.append(symbol)
+    my_dict = dict(zip(keys, sentence.split(" ")))
+    arr = []
+    for idx in sorted(keys):
+        arr.append(my_dict[idx])
+    return ' '.join(arr)
+
 
 
 order("is2 Thi1s T4est 3a")
