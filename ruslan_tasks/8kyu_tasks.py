@@ -148,3 +148,15 @@ def to_alternating_case(string):
 
 
 to_alternating_case('HeLLo WoRLD')
+
+# https://www.codewars.com/kata/563a631f7cbbc236cf0000c2/train/python
+def move(position, roll):
+    return position + roll * 2
+
+# https://www.codewars.com/kata/57a1fd2ce298a731b20006a4/train/python
+def is_palindrome(s):
+    return s.lower() == s.lower()[::-1]
+
+
+
+is_palindrome("aba")
