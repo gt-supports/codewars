@@ -77,3 +77,8 @@ import math
 
 def round_to_next5(n):
     return math.ceil(n / 5) * 5
+
+
+# https://www.codewars.com/kata/57cc981a58da9e302a000214/solutions/python
+def small_enough(array, limit):
+    return max(array) <= limit
