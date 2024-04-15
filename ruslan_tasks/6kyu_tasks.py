@@ -179,3 +179,11 @@ def sum_dig_pow(a, b): # range(a, b + 1) will be studied by the function
     return my_arr
 
 sum_dig_pow(1,200 )
+
+# https://www.codewars.com/kata/5842df8ccbd22792a4000245/train/python
+def expanded_form(num):
+    return ' + '.join([str(int(x)*10**y) for y, x in enumerate(list(str(num))[::-1]) if int(x) != 0][::-1])
+
+
+
+expanded_form(70304)
