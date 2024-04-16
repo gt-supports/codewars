@@ -160,3 +160,20 @@ def is_palindrome(s):
 
 
 is_palindrome("aba")
+
+# https://www.codewars.com/kata/57cfdf34902f6ba3d300001e/train/python
+def two_sort(array):
+    return '***'.join(sorted(array)[0])
+
+two_sort(["turns", "out", "random", "test", "cases", "are", "easier", "than", "writing", "out", "basic", "ones"])
+
+# https://www.codewars.com/kata/5a6663e9fd56cb5ab800008b/train/python
+def human_years_cat_years_dog_years(human_years):
+    if human_years == 1:
+        return [1, 15, 15]
+    if human_years == 2:
+        return [2, 24, 24]
+    return  [human_years, 24+(human_years-2)*4, 24+(human_years-2)*5]
+
+
+human_years_cat_years_dog_years(1)
