@@ -82,3 +82,15 @@ def round_to_next5(n):
 # https://www.codewars.com/kata/57cc981a58da9e302a000214/solutions/python
 def small_enough(array, limit):
     return max(array) <= limit
+
+
+# https://www.codewars.com/kata/583f158ea20cfcbeb400000a/train/python
+def arithmetic(a, b, operator):
+    if operator == 'add':
+        return a + b
+    if operator == 'subtract':
+        return a - b
+    if operator == 'multiply':
+        return a * b
+    if operator == 'divide':
+        return a / b
