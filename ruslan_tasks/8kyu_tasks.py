@@ -160,3 +160,9 @@ def is_palindrome(s):
 
 
 is_palindrome("aba")
+
+# https://www.codewars.com/kata/57cfdf34902f6ba3d300001e/train/python
+def two_sort(array):
+    return '***'.join(sorted(array)[0])
+
+two_sort(["turns", "out", "random", "test", "cases", "are", "easier", "than", "writing", "out", "basic", "ones"])
