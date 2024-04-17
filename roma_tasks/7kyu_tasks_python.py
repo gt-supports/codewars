@@ -94,3 +94,9 @@ def arithmetic(a, b, operator):
         return a * b
     if operator == 'divide':
         return a / b
+
+
+# https://www.codewars.com/kata/5b180e9fedaa564a7000009a/solutions/python?filter=me&sort=best_practice&invalids=false
+def solve(s):
+    length = len([i for i in s if i.lower() == i])
+    return s.lower() if length >= len(s) / 2 else s.upper()
