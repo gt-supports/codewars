@@ -193,9 +193,12 @@ def two_sum(numbers, target):
             if i!=j and num_i+num_j == target:
                 return i,j
 
-
-
-
 two_sum([1, 2 , 3], 4)
 
+# https://www.codewars.com/kata/52efefcbcdf57161d4000091/train/python
+def count(s):
+    unique_letters = [ letter for letter in set(list(s))]
+    idx= [list(s).count(letter) for letter in unique_letters ]
+    return {keys:values for keys, values in zip(unique_letters, idx)}
 
+count("zzzzzzzzabbccc")
