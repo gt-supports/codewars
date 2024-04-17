@@ -184,6 +184,18 @@ sum_dig_pow(1,200 )
 def expanded_form(num):
     return ' + '.join([str(int(x)*10**y) for y, x in enumerate(list(str(num))[::-1]) if int(x) != 0][::-1])
 
-
-
 expanded_form(70304)
+
+# https://www.codewars.com/kata/52c31f8e6605bcc646000082/train/python
+def two_sum(numbers, target):
+    for i, num_i in enumerate(numbers):
+        for j, num_j in enumerate(numbers):
+            if i!=j and num_i+num_j == target:
+                return i,j
+
+
+
+
+two_sum([1, 2 , 3], 4)
+
+
