@@ -201,4 +201,7 @@ def count(s):
     idx= [list(s).count(letter) for letter in unique_letters ]
     return {keys:values for keys, values in zip(unique_letters, idx)}
 
-count("zzzzzzzzabbccc")
+def count_test(s):
+    print({i: s.count(i) for i in s})
+
+count_test("zzzzzzzzabbccc")
