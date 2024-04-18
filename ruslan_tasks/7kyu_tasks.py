@@ -72,3 +72,9 @@ def nb_year(p0, percent, aug, p):
         p0 += math.floor(p0 * percent/100) + aug
         i += 1
     return i
+
+# https://www.codewars.com/kata/542c0f198e077084c0000c2e/python
+def divisors(n):
+    return len([x for x in range(1, n) if n % x == 0])
+
+divisors(30)
