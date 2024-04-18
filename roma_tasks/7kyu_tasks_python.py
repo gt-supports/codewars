@@ -100,3 +100,12 @@ def arithmetic(a, b, operator):
 def solve(s):
     length = len([i for i in s if i.lower() == i])
     return s.lower() if length >= len(s) / 2 else s.upper()
+
+
+# https://www.codewars.com/kata/58b8c94b7df3f116eb00005b/solutions/python
+import re
+
+
+def reverse_letter(s):
+    letters = re.findall(r'[a-zA-Z]', s)
+    return ''.join(letters[::-1])
