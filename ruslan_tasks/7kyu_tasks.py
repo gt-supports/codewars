@@ -1,6 +1,6 @@
 # https://www.codewars.com/kata/563cf89eb4747c5fb100001b/train/python
 # 2024-04-02
-
+import math
 def remove_smallest(numbers):
 
     return [numbers[i] for i in range(len(numbers)) if i != numbers.index(min(numbers))]
@@ -60,3 +60,15 @@ def reverse_words(text):
 def stray(arr):
     return [arr[i] for i in range(len(arr)) if arr[i] != arr[i-1] and arr[i] != arr[i-2]][0]
 
+# https://www.codewars.com/kata/546e2562b03326a88e000020/train/python
+def square_digits(num):
+    print(int(''.join([str(int(x)**2) for x in str(num)])))
+    return int(''.join([str(int(x)**2) for x in str(num)]))
+
+# https://www.codewars.com/kata/563b662a59afc2b5120000c6/train/python
+def nb_year(p0, percent, aug, p):
+    i = 0
+    while p0 < p:
+        p0 += math.floor(p0 * percent/100) + aug
+        i += 1
+    return i

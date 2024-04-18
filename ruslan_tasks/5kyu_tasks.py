@@ -122,5 +122,15 @@ def times(num):
 def divided_by(num):
     return ["/", num]
 
-print(seven(times(five())))
-plus(two())
+
+
+# https://www.codewars.com/kata/514a024011ea4fb54200004b/train/python
+def domain_name(url):
+    url_start = ['http://', 'https://', 'www.']
+    url_no_start = url.replace(''.join([x for x in url_start if x in url]), '')
+    url_no_start = url_no_start.replace(''.join([x for x in url_start if x in url]), '')
+    print(url_no_start)
+    return ''.join(list(url_no_start)[0:url_no_start.index(".")])
+
+
+domain_name("http://www.codewars.com/kata/")
