@@ -100,3 +100,12 @@ def arithmetic(a, b, operator):
 def solve(s):
     length = len([i for i in s if i.lower() == i])
     return s.lower() if length >= len(s) / 2 else s.upper()
+
+
+# https://www.codewars.com/kata/55fd2d567d94ac3bc9000064/solutions/python
+
+def row_sum_odd_numbers(n):
+    if type(n) == int and n > 0:
+        return n ** 3
+    else:
+        return "Input a positive integer"
