@@ -204,4 +204,10 @@ def count(s):
 def count_test(s):
     print({i: s.count(i) for i in s})
 
-count_test("zzzzzzzzabbccc")
+
+# https://www.codewars.com/kata/5552101f47fc5178b1000050/train/python
+def dig_pow(n, p):
+    suma = sum([int(x)**(p+i) for i, x in enumerate(list(str(n)))])
+    return suma / n if suma % n == 0 else -1
+
+dig_pow(46288, 3)
