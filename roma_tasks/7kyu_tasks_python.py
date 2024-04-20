@@ -109,3 +109,8 @@ import re
 def reverse_letter(s):
     letters = re.findall(r'[a-zA-Z]', s)
     return ''.join(letters[::-1])
+
+
+# https://www.codewars.com/kata/5aba780a6a176b029800041c/solutions/python
+def max_multiple(divisor, bound):
+    return bound // divisor * divisor
