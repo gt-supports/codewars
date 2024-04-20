@@ -109,3 +109,10 @@ import re
 def reverse_letter(s):
     letters = re.findall(r'[a-zA-Z]', s)
     return ''.join(letters[::-1])
+# https://www.codewars.com/kata/55fd2d567d94ac3bc9000064/solutions/python
+
+def row_sum_odd_numbers(n):
+    if type(n) == int and n > 0:
+        return n ** 3
+    else:
+        return "Input a positive integer"
