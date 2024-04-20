@@ -116,3 +116,8 @@ def row_sum_odd_numbers(n):
         return n ** 3
     else:
         return "Input a positive integer"
+
+
+# https://www.codewars.com/kata/5aba780a6a176b029800041c/solutions/python
+def max_multiple(divisor, bound):
+    return bound // divisor * divisor
