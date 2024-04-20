@@ -187,3 +187,10 @@ expression_matter(9,1,1)
 # https://www.codewars.com/kata/55a70521798b14d4750000a4/train/python
 def greet(name):
     return f"Hello, {name} how are you doing today?"
+
+
+# https://www.codewars.com/kata/58ca658cc0d6401f2700045f/train/python
+def find_multiples(integer, limit):
+    return [integer*(i+1) for i in range(int(limit/integer)) ]
+
+find_multiples(5, 25)
