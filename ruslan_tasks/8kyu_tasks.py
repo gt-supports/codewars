@@ -192,11 +192,24 @@ def greet(name):
 # https://www.codewars.com/kata/58ca658cc0d6401f2700045f/train/python
 def find_multiples(integer, limit):
     # list(range(integer, limit + 1, integer))  разобрать решение
-
     return [integer*(i+1) for i in range(int(limit/integer)) ]
 
-find_multiples(5, 25)
 
 # https://www.codewars.com/kata/5aa736a455f906981800360d/train/python
 def feast(beast, dish):
     return beast[0] == dish[0] and beast[-1] == dish[-1]
+
+
+# https://www.codewars.com/kata/5bb904724c47249b10000131/train/python
+def points(games):
+    total = 0
+    for points in games:
+        if int(points[0]) > int(points[-1]):
+            total += 3
+        elif int(points[0]) == int(points[-1]):
+            total += 1
+    return total
+
+
+
+points(['1:0','2:0','3:0','4:0','2:1','3:1','4:1','3:2','4:2','4:3'])
