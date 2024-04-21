@@ -78,3 +78,8 @@ def divisors(n):
     return len([x for x in range(1, n) if n % x == 0])
 
 divisors(30)
+
+# https://www.codewars.com/kata/5174a4c0f2769dd8b1000003/train/python
+def solution(nums):
+    return sorted(nums) if nums else []
+
