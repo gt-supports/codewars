@@ -109,6 +109,8 @@ import re
 def reverse_letter(s):
     letters = re.findall(r'[a-zA-Z]', s)
     return ''.join(letters[::-1])
+
+
 # https://www.codewars.com/kata/55fd2d567d94ac3bc9000064/solutions/python
 
 def row_sum_odd_numbers(n):
@@ -121,3 +123,9 @@ def row_sum_odd_numbers(n):
 # https://www.codewars.com/kata/5aba780a6a176b029800041c/solutions/python
 def max_multiple(divisor, bound):
     return bound // divisor * divisor
+
+
+# https://www.codewars.com/kata/5ac6932b2f317b96980000ca/solutions/python?filter=me&sort=best_practice&invalids=false
+def min_value(digits):
+    uniq_digits = sorted(list(set(digits)))
+    return int(''.join(map(str, uniq_digits)))
