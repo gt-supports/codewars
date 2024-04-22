@@ -121,4 +121,12 @@ def arithmetic(a, b, operator):
  # создай словарь!!!
     #"add", "subtract", "divide", "multiply".
 
-arithmetic(1, 2, "add")
+
+# https://www.codewars.com/kata/51f2b4448cadf20ed0000386/train/python
+def remove_url_anchor(url):
+    index = [idx for idx, x in enumerate(url) if x == "#"]
+    print(index)
+    return ''.join(list(url)[:index[0]]) if index !=[] else url
+    # TODO: complete
+
+remove_url_anchor("www.codewars.comabout")
