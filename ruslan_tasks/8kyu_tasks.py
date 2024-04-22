@@ -213,3 +213,17 @@ def points(games):
 
 
 points(['1:0','2:0','3:0','4:0','2:1','3:1','4:1','3:2','4:2','4:3'])
+
+# https://www.codewars.com/kata/576bb71bbbcf0951d5000044/train/python
+def count_positives_sum_negatives(arr):
+    positive = len([num for num in arr if num >0])
+    negative = sum([num for num in arr if num < 0])
+    return [positive, negative] if arr else []
+
+
+
+count_positives_sum_negatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15])
+
+# https://www.codewars.com/kata/5ab6538b379d20ad880000ab/train/python
+def area_or_perimeter(l , w):
+    return l*w if l==w else 2*(l+w)

@@ -211,3 +211,67 @@ def dig_pow(n, p):
     return suma / n if suma % n == 0 else -1
 
 dig_pow(46288, 3)
+
+
+# https://www.codewars.com/kata/54da5a58ea159efa38000836/train/python
+def find_it(seq):
+    return [x for x in seq if seq.count(x) % 2 == 1][0]
+
+
+
+find_it([1,1,2,-2,5,2,4,4,-1,-2,5])
+
+# https://www.codewars.com/kata/57814d79a56c88e3e0000786/python
+
+def decrypt(encrypted_text, n):
+    if encrypted_text == None:
+        return None
+    elif encrypted_text == '':
+        return ''
+    for x in range(n):
+        divide = len(encrypted_text) // 2
+        if x % 2 == 0:
+            if len(encrypted_text) % 2 != 0:
+                even = encrypted_text[:divide:]
+                odd = encrypted_text[divide::]
+            else:
+                even = encrypted_text[:divide:]
+                odd = encrypted_text[divide::]
+        else:
+            if len(encrypted_text) % 2 != 0:
+                even = encrypted_text[:divide:]
+                odd = encrypted_text[divide::]
+            else:
+                even = encrypted_text[:divide:]
+                odd = encrypted_text[divide::]
+        my_arr = []
+        for i in range(max(len(odd), len(even))):
+            my_arr.append(odd[i])
+            if i < len(even):
+                my_arr.append(even[i])
+        encrypted_text = ''.join(my_arr)
+    return encrypted_text
+    for i in range(n):
+        odd= ''.join([odd for idx, odd in enumerate(encrypted_text) if idx%2 != 0])
+        even= ''.join([even for idx, even in enumerate(encrypted_text) if idx % 2 == 0])
+        encrypted_text = odd + even
+    return encrypted_text
+
+def encrypt(text, n):
+    if text == None:
+        return None
+    elif text == '':
+        return ''
+    for i in range(n):
+        odd = ''.join([odd for idx, odd in enumerate(text) if idx%2 != 0])
+        even = ''.join([even for idx, even in enumerate(text) if idx % 2 == 0])
+        text = odd + even
+    return text
+
+
+decrypt(decrypt("hskt svr neetn!Ti aai eyitrsig", 1))
+
+
+
+
+encrypt("012345", 3)
