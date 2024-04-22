@@ -83,3 +83,42 @@ divisors(30)
 def solution(nums):
     return sorted(nums) if nums else []
 
+
+# https://www.codewars.com/kata/54bf85e3d5b56c7a05000cf9/train/python
+def number(lines):
+    return [f'{idx+1}: {x}' for idx, x in enumerate(lines)]
+
+
+# https://www.codewars.com/kata/554e4a2f232cdd87d9000038/train/python
+def DNA_strand(dna):
+    d = {"A": "T", "T": "A", "C": "G", "G": "C"}
+    # print(dna.translate(str.maketrans("ATCG", "TAGC"))) запомнить
+    return ''.join([d[i] for i in list(dna)])
+
+
+# https://www.codewars.com/kata/566fc12495810954b1000030/train/python
+def nb_dig(n, d):
+    arr = [k**2 for k in range(n+1)]
+    return list(str(arr)).count(str(d))
+
+# https://www.codewars.com/kata/57ea5b0b75ae11d1e800006c/train/python
+def sort_by_length(arr):
+    return sorted(arr, key=len)
+
+
+sort_by_length(["beg", "life", "i", "to"])
+
+# https://www.codewars.com/kata/583f158ea20cfcbeb400000a/train/python
+def arithmetic(a, b, operator):
+    if operator == "add":
+        return a+b
+    elif operator == "subtract":
+        return a-b
+    elif operator == "divide":
+        return a / b
+    return a*b
+
+ # создай словарь!!!
+    #"add", "subtract", "divide", "multiply".
+
+arithmetic(1, 2, "add")
