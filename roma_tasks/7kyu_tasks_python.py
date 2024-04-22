@@ -129,3 +129,11 @@ def max_multiple(divisor, bound):
 def min_value(digits):
     uniq_digits = sorted(list(set(digits)))
     return int(''.join(map(str, uniq_digits)))
+
+
+# https://www.codewars.com/kata/59cfc000aeb2844d16000075/solutions/python
+def capitalize(s):
+    evenCap = ''.join([char.upper() if i % 2 == 0 else char for i, char in enumerate(s)])
+    oddCap = ''.join([char.upper() if i % 2 != 0 else char for i, char in enumerate(s)])
+
+    return [evenCap, oddCap]
