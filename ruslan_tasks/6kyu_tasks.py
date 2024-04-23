@@ -268,10 +268,12 @@ def encrypt(text, n):
         text = odd + even
     return text
 
+# decrypt(decrypt("hskt svr neetn!Ti aai eyitrsig", 1))
+# encrypt("012345", 3)
 
-decrypt(decrypt("hskt svr neetn!Ti aai eyitrsig", 1))
+# https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1/train/python
+def duplicate_count(text):
+    return sum([1 for x in set(text.lower()) if list(text.lower()).count(x) > 1])
+# Your code goes here
 
-
-
-
-encrypt("012345", 3)
+duplicate_count("abcdeaB")
