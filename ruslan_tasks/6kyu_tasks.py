@@ -1,4 +1,6 @@
 # Old tasks
+import string
+
 
 # https://www.codewars.com/kata/556deca17c58da83c00002db
 def tribonacci(signature, n):
@@ -277,3 +279,14 @@ def duplicate_count(text):
 # Your code goes here
 
 duplicate_count("abcdeaB")
+
+# https://www.codewars.com/kata/545cedaa9943f7fe7b000048/train/python
+def is_pangram(s):
+    print(string.ascii_lowercase)
+    print()
+    return len([x for x in set(s.lower()) if x.isalpha()]) == 26
+
+
+
+is_pangram("1bcdefghijklmnopqrstuvwxyz")
+is_pangram("The quick, brown fox jumps over the lazy dog!")
