@@ -1,4 +1,6 @@
 # Old tasks
+import string
+
 
 # https://www.codewars.com/kata/556deca17c58da83c00002db
 def tribonacci(signature, n):
@@ -277,3 +279,33 @@ def duplicate_count(text):
 # Your code goes here
 
 duplicate_count("abcdeaB")
+
+# https://www.codewars.com/kata/545cedaa9943f7fe7b000048/train/python
+def is_pangram(s):
+    print(string.ascii_lowercase)
+    print()
+    return len([x for x in set(s.lower()) if x.isalpha()]) == 26
+
+
+
+is_pangram("1bcdefghijklmnopqrstuvwxyz")
+is_pangram("The quick, brown fox jumps over the lazy dog!")
+
+# https://www.codewars.com/kata/550498447451fbbd7600041c/train/python
+def comp(array1, array2):
+    if array1 == None or array2 == None or array1 =={} or array2 =={} or array1 == null or array2 == null:
+        return False
+    if len(array1) != len(array2):
+        return False
+    array1 = [abs(x) for x in array1]
+    array2 = [abs(y) for y in array2]
+    check = 0
+    for idx, x in enumerate(sorted(array1)):
+        for idy, y in enumerate(sorted(array2)):
+            if idx == idy and x**2 == y:
+                check += 1
+    return True if check == len(array1) else False
+
+    # your code
+
+comp([121,144,19,161,19,144,19,11], [11*11, 121*121, 144*144, 19*19, 161*161, 19*19, 144*144, 19*19])
