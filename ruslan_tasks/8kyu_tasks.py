@@ -227,3 +227,10 @@ count_positives_sum_negatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14
 # https://www.codewars.com/kata/5ab6538b379d20ad880000ab/train/python
 def area_or_perimeter(l , w):
     return l*w if l==w else 2*(l+w)
+
+
+# https://www.codewars.com/kata/58649884a1659ed6cb000072/train/python
+def update_light(current):
+    return { 'green': 'yellow', 'yellow': 'red', 'red': 'green'}[current]
+
+update_light('green')
