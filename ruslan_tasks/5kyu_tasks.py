@@ -133,4 +133,22 @@ def domain_name(url):
     return ''.join(list(url_no_start)[0:url_no_start.index(".")])
 
 
-domain_name("http://www.codewars.com/kata/")
+# domain_name("http://www.codewars.com/kata/")
+
+# https://www.codewars.com/kata/5541f58a944b85ce6d00006a/train/python
+def product_fib(_prod):
+    prev = 0
+    cur = 1
+    next = 0
+    while cur * prev < _prod:
+        next = prev + cur
+        prev = cur
+        cur = next
+    if prev*cur >=_prod:
+        return [prev, cur, prev*cur ==_prod]
+    next = prev + cur
+    prev = cur
+    cur = next
+    return [prev, cur, prev*cur ==_prod]
+
+product_fib(4895)

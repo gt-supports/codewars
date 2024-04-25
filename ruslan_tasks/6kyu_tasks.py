@@ -288,8 +288,8 @@ def is_pangram(s):
 
 
 
-is_pangram("1bcdefghijklmnopqrstuvwxyz")
-is_pangram("The quick, brown fox jumps over the lazy dog!")
+# is_pangram("1bcdefghijklmnopqrstuvwxyz")
+# is_pangram("The quick, brown fox jumps over the lazy dog!")
 
 # https://www.codewars.com/kata/550498447451fbbd7600041c/train/python
 def comp(array1, array2):
@@ -308,4 +308,18 @@ def comp(array1, array2):
 
     # your code
 
-comp([121,144,19,161,19,144,19,11], [11*11, 121*121, 144*144, 19*19, 161*161, 19*19, 144*144, 19*19])
+# comp([121,144,19,161,19,144,19,11], [11*11, 121*121, 144*144, 19*19, 161*161, 19*19, 144*144, 19*19])
+
+# https://www.codewars.com/kata/554ca54ffa7d91b236000023/train/python
+def delete_nth(order,max_e):
+    new_arr = []
+    for x in order:
+        idx_arr = [i for i, y in enumerate(order) if y == x]
+        new_arr += idx_arr[:max_e]
+    arr = list(set(sorted(new_arr)))
+    return [num for idx, num in enumerate(order) if idx in arr]
+
+
+
+delete_nth(["a", 2, 3, "a", "a", 2, "a", 2, 3, 3, "a", 4, 5, 3, 1], 3)
+# delete_nth([1, 2, 3, 1, 1, 2, 1, 2, 3, 3, 2, 4, 5, 3, 1], 3)
