@@ -137,3 +137,9 @@ def capitalize(s):
     oddCap = ''.join([char.upper() if i % 2 != 0 else char for i, char in enumerate(s)])
 
     return [evenCap, oddCap]
+
+
+# https://www.codewars.com/kata/556196a6091a7e7f58000018/solutions/python
+def largest_pair_sum(numbers):
+    new_muns = numbers.sort()
+    return numbers[-1] + numbers[-2]
