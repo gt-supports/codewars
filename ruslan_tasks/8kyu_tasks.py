@@ -234,3 +234,16 @@ def update_light(current):
     return { 'green': 'yellow', 'yellow': 'red', 'red': 'green'}[current]
 
 update_light('green')
+
+# https://www.codewars.com/kata/5808e2006b65bff35500008f/train/python
+def position(alphabet):
+    return f'Position of alphabet: {ord(alphabet)-96}'
+
+position("a")
+
+# https://www.codewars.com/kata/57ee4a67108d3fd9eb0000e7/train/python
+geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
+def goose_filter(birds):
+    return [b for b in birds if b not in geese]
+
+goose_filter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"])
