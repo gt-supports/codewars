@@ -323,3 +323,24 @@ def delete_nth(order,max_e):
 
 delete_nth(["a", 2, 3, "a", "a", 2, "a", 2, 3, 3, "a", 4, 5, 3, 1], 3)
 # delete_nth([1, 2, 3, 1, 1, 2, 1, 2, 3, 3, 2, 4, 5, 3, 1], 3)
+
+# https://www.codewars.com/kata/583203e6eb35d7980400002a/train/python
+def count_smileys(arr):
+    eyes = [':', ';']
+    noses = ['-', '~']
+    mouths = [')','D']
+    print(sum([1 for x in arr if x[0] in eyes and x[-1] in mouths and x[1] in noses if len(x) == 3]))
+    count = 0
+    for x in arr:
+        if x[0] in eyes and x[-1] in mouths:
+            if len(x) == 3 and x[1] in noses or len(x) == 2:
+                count += 1
+    print(count)
+    return  count
+
+
+    # return sum([1 for x in arr if x[0] in eyes and x[-1] in mouths])
+
+count_smileys([':)', ':(', ':D', ':O', ':;'])
+
+
