@@ -143,3 +143,8 @@ def capitalize(s):
 def largest_pair_sum(numbers):
     new_muns = numbers.sort()
     return numbers[-1] + numbers[-2]
+
+
+# https://www.codewars.com/kata/57ed30dde7728215300005fa/train/python
+def bumps(road):
+    return 'Woohoo!' if road.count('n') <= 15 else 'Car Dead'
