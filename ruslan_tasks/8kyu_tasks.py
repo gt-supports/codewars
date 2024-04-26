@@ -247,3 +247,12 @@ def goose_filter(birds):
     return [b for b in birds if b not in geese]
 
 goose_filter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"])
+
+# https://www.codewars.com/kata/57e1e61ba396b3727c000251
+from re import findall
+def string_clean(s):
+    print(''.join(findall(r'\D', s)))
+    print(''.join(findall(r'[^0-9]', s)))
+    return ''.join(findall(r'\D', s))
+
+string_clean("(E3at m2e2!!)")
