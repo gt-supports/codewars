@@ -73,3 +73,14 @@ function wordsToMarks(string) {
 function removeDuplicateWords(s) {
     return [...new Set(s.split(' '))].join(' ')
 }
+
+
+//https://www.codewars.com/kata/5a4138acf28b82aa43000117/train/javascript
+
+function adjacentElementsProduct(array) {
+    const productArray = []
+    for (i = 0; i < array.length - 1; i++) {
+        productArray.push(array[i] * array[i + 1])
+    }
+    return Math.max(...productArray)
+}
