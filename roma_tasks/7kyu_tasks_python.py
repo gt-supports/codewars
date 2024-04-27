@@ -148,3 +148,11 @@ def largest_pair_sum(numbers):
 # https://www.codewars.com/kata/57ed30dde7728215300005fa/train/python
 def bumps(road):
     return 'Woohoo!' if road.count('n') <= 15 else 'Car Dead'
+
+
+# https://www.codewars.com/kata/5a4138acf28b82aa43000117/train/python
+def adjacent_element_product(array):
+    new_arr = []
+    for i, num in enumerate(array[:-1]):
+        new_arr.append(num * array[i + 1])
+    return max(new_arr)
