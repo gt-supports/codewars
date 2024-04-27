@@ -344,3 +344,10 @@ def count_smileys(arr):
 count_smileys([':)', ':(', ':D', ':O', ':;'])
 
 
+# https://www.codewars.com/kata/514b92a657cdc65150000006
+def solution(number):
+    print(sum(x for x in range(number) if x % 3 == 0  or x % 5 == 0))
+    return sum([x for x in range(number) if x % 3 == 0  or x % 5 == 0])
+
+
+solution(6)

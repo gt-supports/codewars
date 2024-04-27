@@ -129,3 +129,12 @@ def remove_url_anchor(url):
     # TODO: complete
 
 remove_url_anchor("www.codewars.comabout")
+
+# https://www.codewars.com/kata/5412509bd436bd33920011bc/train/python
+def maskify(cc):
+    print('#'*2)
+    print('#' * -2)
+    return ''.join(['#' if idx < len(cc)-4 else x for idx, x in enumerate(list(cc))])
+
+maskify('SF$SDfgsd2eA')
+maskify('2eA')
