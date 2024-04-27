@@ -1,5 +1,8 @@
 # https://www.codewars.com/kata/57356c55867b9b7a60000bd7/train/python
 # 2024-04-03
+import re
+
+
 def basic_op(operator, value1, value2):
     if operator == "+":
         return value1 + value2
@@ -255,4 +258,13 @@ def string_clean(s):
     print(''.join(findall(r'[^0-9]', s)))
     return ''.join(findall(r'\D', s))
 
-string_clean("(E3at m2e2!!)")
+# string_clean("(E3at m2e2!!)")
+
+# https://www.codewars.com/kata/55ccdf1512938ce3ac000056/train/python
+def is_loch_ness_monster(string):
+    print(re.findall(r'(tree fiddy|three fifty|3\.50)', string))
+    return re.findall(r'(tree fiddy|three fifty|3\.50)', string)!=[]
+
+# is_loch_ness_monster("Your girlscout cookies are ready to ship. Your total comes to tree fiddy")
+# is_loch_ness_monster("Your girlscout cookies are ready to ship. Your total comes to three fifty")
+# is_loch_ness_monster('Hello, I come from the year 3150 to bring you good news!')
