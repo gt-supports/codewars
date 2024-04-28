@@ -346,8 +346,17 @@ count_smileys([':)', ':(', ':D', ':O', ':;'])
 
 # https://www.codewars.com/kata/514b92a657cdc65150000006
 def solution(number):
-    print(sum(x for x in range(number) if x % 3 == 0  or x % 5 == 0))
+    # print(sum(x for x in range(number) if x % 3 == 0  or x % 5 == 0))
     return sum([x for x in range(number) if x % 3 == 0  or x % 5 == 0])
 
 
-solution(6)
+# solution(6)
+
+# https://www.codewars.com/kata/5264d2b162488dc400000001/train/python
+def spin_words(sentence):
+    print(' '.join([w[::-1] if len(w)>4 else w for w in sentence.split()]))
+    # Your code goes here
+    return ' '.join([w[::-1] if len(w)>4 else w for w in sentence.split()])
+
+
+spin_words("This is another test")
