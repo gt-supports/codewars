@@ -84,3 +84,10 @@ function adjacentElementsProduct(array) {
     }
     return Math.max(...productArray)
 }
+
+//https://www.codewars.com/kata/535474308bb336c9980006f2/train/javascript
+
+const greet = function (name) {
+    const newName = name.toLowerCase()
+    return `Hello ${newName[0].toUpperCase() + newName.slice(1)}!`
+};
