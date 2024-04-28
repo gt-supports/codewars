@@ -166,4 +166,20 @@ def to_jaden_case(string):
 
 
 
-to_jaden_case("How can mirrors be real if our eyes aren't real")
+# to_jaden_case("How can mirrors be real if our eyes aren't real")
+
+
+# https://www.codewars.com/kata/5502c9e7b3216ec63c0001aa/train/python
+def open_or_senior(data):
+    return ['Senior' if w[0] > 54 and w[1] > 7 else 'Open' for w in data]
+
+
+
+# open_or_senior([(45, 12),(55,21),(19, -2),(104, 20)])
+
+# https://www.codewars.com/kata/544aed4c4a30184e960010f4
+def divisors(integer):
+    div = [ x for x in range(2, integer) if integer % x == 0]
+    return div if div else f'{integer} is prime'
+
+divisors(37)
