@@ -136,5 +136,34 @@ def maskify(cc):
     print('#' * -2)
     return ''.join(['#' if idx < len(cc)-4 else x for idx, x in enumerate(list(cc))])
 
-maskify('SF$SDfgsd2eA')
-maskify('2eA')
+# maskify('SF$SDfgsd2eA')
+# maskify('2eA')
+
+# https://www.codewars.com/kata/52fba66badcd10859f00097e/train/python
+import re
+def disemvowel(string_):
+    print(''.join(re.findall(r'[^aeiouAEIOU]', string_)))
+    return ''.join(re.findall(r'[^aeiouAEIOU]', string_))
+
+
+# disemvowel("This website is for losers LOL!")
+
+# https://www.codewars.com/kata/54c27a33fb7da0db0100040e/train/python
+import math
+def is_square(n):
+    return n > 0 and int(math.sqrt(n)) == math.sqrt(n)
+
+is_square(-25)
+
+
+# https://www.codewars.com/kata/5390bac347d09b7da40006f6/train/python
+def to_jaden_case(string):
+    arr = []
+    for w in string.split():
+        arr_1 = w[0].upper() + w[1:len(w):].lower()
+        arr.append(arr_1)
+    return ' '.join(arr)
+
+
+
+to_jaden_case("How can mirrors be real if our eyes aren't real")

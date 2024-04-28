@@ -268,3 +268,23 @@ def is_loch_ness_monster(string):
 # is_loch_ness_monster("Your girlscout cookies are ready to ship. Your total comes to tree fiddy")
 # is_loch_ness_monster("Your girlscout cookies are ready to ship. Your total comes to three fifty")
 # is_loch_ness_monster('Hello, I come from the year 3150 to bring you good news!')
+
+
+# https://www.codewars.com/kata/56a946cd7bd95ccab2000055/train/python
+import re
+def lowercase_count(strng):
+    return len(re.findall(r'[a-z]', strng))
+
+
+lowercase_count("abcABC123!@#$%^&*()_-+=}{[]|\':;?/>.<,~")
+
+
+# https://www.codewars.com/kata/56a3f08aa9a6cc9b75000023/train/python
+import re
+def validate_usr(username):
+    print(re.match('^[a-z0-9_]{4,16}$', username)!=None)
+
+    return len(re.findall(r'[a-zA-Z0-9_]', username)) == len(username) and 4 <= len(username) <= 16
+
+
+validate_usr('bcd123Abcd123')
