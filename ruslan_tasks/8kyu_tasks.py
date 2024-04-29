@@ -287,4 +287,14 @@ def validate_usr(username):
     return len(re.findall(r'[a-zA-Z0-9_]', username)) == len(username) and 4 <= len(username) <= 16
 
 
-validate_usr('bcd123Abcd123')
+# validate_usr('bcd123Abcd123')
+
+def sale_hotdogs(n):
+    return n * (100 if n < 5 else 95 if n < 10 else 90)
+
+# https://www.codewars.com/kata/56a25ba95df27b7743000016/train/python
+def validate_code(code):
+    print(bool(re.match(r'[1-3]', str(code))))
+    return re.match(r'^[1-3]{1}', str(code))!=None
+
+validate_code(143245)
