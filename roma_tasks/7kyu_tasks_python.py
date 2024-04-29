@@ -161,3 +161,8 @@ def adjacent_element_product(array):
 # https://www.codewars.com/kata/535474308bb336c9980006f2/train/python
 def greet(name):
     return f"Hello {name[0].upper() + name[1:].lower()}!"
+
+
+# https://www.codewars.com/kata/59a8570b570190d313000037/train/python
+def sum_cubes(n):
+    return sum(num ** 3 for num in range(1, n + 1))
