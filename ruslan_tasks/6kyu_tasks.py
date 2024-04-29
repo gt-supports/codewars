@@ -341,7 +341,7 @@ def count_smileys(arr):
 
     # return sum([1 for x in arr if x[0] in eyes and x[-1] in mouths])
 
-count_smileys([':)', ':(', ':D', ':O', ':;'])
+# count_smileys([':)', ':(', ':D', ':O', ':;'])
 
 
 # https://www.codewars.com/kata/514b92a657cdc65150000006
@@ -359,4 +359,16 @@ def spin_words(sentence):
     return ' '.join([w[::-1] if len(w)>4 else w for w in sentence.split()])
 
 
-spin_words("This is another test")
+# spin_words("This is another test")
+
+# https://www.codewars.com/kata/541c8630095125aba6000c00/train/python
+def digital_root(n):
+    print( n%9 or n and 9)
+    while len(str(n)) > 1:
+        n = sum([int(x) for x in list(str(n))])
+    return n
+
+
+
+
+digital_root(942)

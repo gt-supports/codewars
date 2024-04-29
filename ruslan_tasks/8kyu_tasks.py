@@ -294,6 +294,7 @@ def sale_hotdogs(n):
 
 # https://www.codewars.com/kata/56a25ba95df27b7743000016/train/python
 def validate_code(code):
-    return re.match(r'^[123]{1}', str(code))!=None
+    print(bool(re.match(r'[1-3]', str(code))))
+    return re.match(r'^[1-3]{1}', str(code))!=None
 
-validate_code(245)
+validate_code(143245)
