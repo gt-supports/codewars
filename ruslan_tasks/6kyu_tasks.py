@@ -392,9 +392,22 @@ create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
 
 # https://www.codewars.com/kata/5526fc09a1bbd946250002dc/train/python
 def find_outlier(integers):
-    arr = [ 1 if x%2 else 0 for x in integers ]
+    # arr = [ 1 if x%2 else 0 for x in integers ]
+    arr = [x % 2 for x in integers]
+    # print(arr.index(1))
+    # print(arr.index(0))
+    # print(integers.index(1719))
     id = [idx for idx, y in enumerate(arr) if arr.count(y) == 1 ][0]
+    # print(integers[id])
     return integers[id]
 
-find_outlier([2, 4, 0, 100, 4, 11, 2602, 36])
-find_outlier([160, 3, 1719, 19, 11, 13, -21])
+# find_outlier([2, 4, 0, 100, 4, 11, 2602, 36])
+# find_outlier([160, 3, 1719, 19, 11, 13, -21])
+
+
+# https://www.codewars.com/kata/526571aae218b8ee490006f4/train/python
+def count_bits(n):
+    return sum(int(x) for x in bin(n)[2:])
+
+
+count_bits(1234)
