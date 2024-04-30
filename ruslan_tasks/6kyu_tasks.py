@@ -368,7 +368,46 @@ def digital_root(n):
         n = sum([int(x) for x in list(str(n))])
     return n
 
-
-
-
 digital_root(942)
+
+# https://www.codewars.com/kata/525f50e3b73515a6db000b83/train/python
+def create_phone_number(n):
+    # чужие решения разбор
+    print("({}{}{}) {}{}{}-{}{}{}{}".format(*n))
+    x = ''.join(map(str, n))
+    print(x)
+    print('(%s) %s-%s'%(x[:3], x[3:6], x[6:]))
+    print('(%s) %a-%s' % (x[:3], x[3:6], x[6:]))
+
+
+    a =''.join([str(x) for idx, x in enumerate(n) if idx <3])
+    b =''.join([str(x) for idx, x in enumerate(n) if idx >= 3 and idx <6])
+    c = ''.join([str(x) for idx, x in enumerate(n) if idx >= 6 and idx < 10])
+    return "("+a+") "+b + "-"+c
+
+    # print("("+''.join(str(n[0:3]))+") "+str(n[3:6])+"-" +str(n[6:]))
+
+    # "(123) 456-7890"
+create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
+
+# https://www.codewars.com/kata/5526fc09a1bbd946250002dc/train/python
+def find_outlier(integers):
+    # arr = [ 1 if x%2 else 0 for x in integers ]
+    arr = [x % 2 for x in integers]
+    # print(arr.index(1))
+    # print(arr.index(0))
+    # print(integers.index(1719))
+    id = [idx for idx, y in enumerate(arr) if arr.count(y) == 1 ][0]
+    # print(integers[id])
+    return integers[id]
+
+# find_outlier([2, 4, 0, 100, 4, 11, 2602, 36])
+# find_outlier([160, 3, 1719, 19, 11, 13, -21])
+
+
+# https://www.codewars.com/kata/526571aae218b8ee490006f4/train/python
+def count_bits(n):
+    return sum(int(x) for x in bin(n)[2:])
+
+
+count_bits(1234)
