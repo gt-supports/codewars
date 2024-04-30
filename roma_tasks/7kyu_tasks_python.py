@@ -166,3 +166,14 @@ def greet(name):
 # https://www.codewars.com/kata/59a8570b570190d313000037/train/python
 def sum_cubes(n):
     return sum(num ** 3 for num in range(1, n + 1))
+
+
+# https://www.codewars.com/kata/58daa7617332e59593000006/train/python
+def find_longest(numbers):
+    largest = numbers[0]
+
+    for number in numbers:
+        if len(str(number)) > len(str(largest)):
+            largest = number
+
+    return largest

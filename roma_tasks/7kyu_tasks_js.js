@@ -101,3 +101,18 @@ function sumCubes(n) {
     }
     return sum
 }
+
+//https://www.codewars.com/kata/58daa7617332e59593000006/train/javascript
+
+function findLongest(numbers) {
+    return numbers.reduce((largest, current) => {
+        const largestDigits = largest.toString().length;
+        const currentDigits = current.toString().length;
+
+        if (currentDigits > largestDigits) {
+            return current;
+        } else {
+            return largest;
+        }
+    });
+}
