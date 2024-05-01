@@ -409,5 +409,20 @@ def find_outlier(integers):
 def count_bits(n):
     return sum(int(x) for x in bin(n)[2:])
 
-
 count_bits(1234)
+
+# https://www.codewars.com/kata/517abf86da9663f1d2000003
+import math
+def persistence(n):
+    i = 0
+    arr = list(str(n))
+    while len(arr) > 1:
+        n = math.prod([int(x) for x in arr])
+        arr = list(str(n))
+        i += 1
+    return i
+
+
+    # your code
+
+persistence(39)
