@@ -177,3 +177,10 @@ def find_longest(numbers):
             largest = number
 
     return largest
+
+
+# https://www.codewars.com/kata/57f759bb664021a30300007d/train/python
+
+def switcheroo(x):
+    replacement = {'a': 'b', 'b': 'a'}
+    return ''.join(replacement.get(letter, letter) for letter in x)
