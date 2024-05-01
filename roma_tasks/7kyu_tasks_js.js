@@ -116,3 +116,16 @@ function findLongest(numbers) {
         }
     });
 }
+
+//https://www.codewars.com/kata/57f759bb664021a30300007d/train/javascript
+
+function switcheroo(x) {
+    return x.split('').map(letter => {
+        if (letter === 'a') {
+            return 'b'
+        } else if (letter === 'b') {
+            return 'a'
+        }
+        return letter
+    }).join('')
+}
