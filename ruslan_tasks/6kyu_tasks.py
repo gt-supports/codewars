@@ -448,3 +448,18 @@ def narcissistic( value ):
     return sum(int(x)**len(str(value)) for x in str(value)) == value
 
 narcissistic(153)
+
+# https://www.codewars.com/kata/54e6533c92449cc251001667
+def unique_in_order(sequence):
+    if len(sequence) == 0: return []
+    arr = []
+    arr.append(sequence[0])
+    for x in sequence:
+        if x !=arr[-1]:
+            arr.append(x)
+    return arr
+
+unique_in_order('AAAABBBCCDAABBB')  # ['A', 'B', 'C', 'D', 'A', 'B']
+# unique_in_order('ABBCcAD')          #['A', 'B', 'C', 'c', 'A', 'D']
+# unique_in_order([1, 2, 2, 3, 3])    #[1, 2, 3]
+# unique_in_order((1, 2, 2, 3, 3))   #[1, 2, 3]
