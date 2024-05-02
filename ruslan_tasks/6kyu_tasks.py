@@ -431,13 +431,20 @@ def persistence(n):
 import re
 def to_camel_case(text):
     # print(re.sub('_|-|-[a-z]{}1|_[a-z]{1}','',text))
+    print(text.title())
     text = re.sub('_|-', ' ', text)
     text = ''.join([x[0].upper()+x[1::] if idx > 0 else x for (idx, x) in enumerate(text.split())])
     text2 = ''.join([x.capitalize() if idx > 0 else x for (idx, x) in enumerate(text.split())])
-    print(text2)
+    # print(text2)
     return text
 
 
 
-to_camel_case("the_stealth_warrior")
-to_camel_case("The-Stealth-Warrior")
+# to_camel_case("the_stealth_warrior")
+# to_camel_case("The-Stealth-Warrior")
+
+# https://www.codewars.com/kata/5287e858c6b5a9678200083c
+def narcissistic( value ):
+    return sum(int(x)**len(str(value)) for x in str(value)) == value
+
+narcissistic(153)
