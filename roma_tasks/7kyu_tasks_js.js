@@ -129,3 +129,21 @@ function switcheroo(x) {
         return letter
     }).join('')
 }
+
+//https://www.codewars.com/kata/57eaec5608fed543d6000021/train/javascript
+
+function divCon(x) {
+    const sumNonString = x.reduce((acc, num) => {
+        if (typeof num === 'number') {
+            return acc + num
+        }
+        return acc
+    }, 0)
+    const sumStrings = x.reduce((acc, num) => {
+        if (typeof num === 'string') {
+            return acc + Number(num)
+        }
+        return acc
+    }, 0)
+    return sumNonString - sumStrings
+}

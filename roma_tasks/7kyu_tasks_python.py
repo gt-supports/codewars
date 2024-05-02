@@ -184,3 +184,11 @@ def find_longest(numbers):
 def switcheroo(x):
     replacement = {'a': 'b', 'b': 'a'}
     return ''.join(replacement.get(letter, letter) for letter in x)
+
+
+# https://www.codewars.com/kata/57eaec5608fed543d6000021/train/python
+
+def div_con(x):
+    sum_int = sum(i for i in x if type(i) == int)
+    sum_none_int = sum(int(i) for i in x if type(i) == str)
+    return sum_int - sum_none_int
