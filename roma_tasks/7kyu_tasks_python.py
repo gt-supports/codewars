@@ -192,3 +192,9 @@ def div_con(x):
     sum_int = sum(i for i in x if type(i) == int)
     sum_none_int = sum(int(i) for i in x if type(i) == str)
     return sum_int - sum_none_int
+
+
+# https://www.codewars.com/kata/5aa1bcda373c2eb596000112/solutions/python
+def max_tri_sum(numbers):
+    sorted_numbers = sorted(set(numbers), reverse=True)
+    return sum(sorted_numbers[:3])
