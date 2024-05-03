@@ -470,4 +470,15 @@ def find_even_index(arr):
     return id_arr[0] if id_arr!=[] else -1
 
 
-find_even_index([8,8])
+# find_even_index([8,8])
+
+# https://www.codewars.com/kata/515de9ae9dcfc28eb6000001
+def solution(s):
+    arr_1 = list(s)[0::2]
+    arr_2 = list(s)[1::2]
+    arr = [x+y for idx, x in enumerate(arr_1) for idy, y in enumerate(arr_2) if idx == idy]
+    if len(s)%2:
+        arr.append(s[-1]+'_')
+    return arr
+
+solution('dfdgdgwge')
