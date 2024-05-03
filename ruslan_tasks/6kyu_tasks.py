@@ -463,3 +463,11 @@ unique_in_order('AAAABBBCCDAABBB')  # ['A', 'B', 'C', 'D', 'A', 'B']
 # unique_in_order('ABBCcAD')          #['A', 'B', 'C', 'c', 'A', 'D']
 # unique_in_order([1, 2, 2, 3, 3])    #[1, 2, 3]
 # unique_in_order((1, 2, 2, 3, 3))   #[1, 2, 3]
+
+# https://www.codewars.com/kata/5679aa472b8f57fb8c000047/train/python
+def find_even_index(arr):
+    id_arr = [id for id, x in enumerate(arr) if sum(arr[:id:]) == sum(arr[id+1::])]
+    return id_arr[0] if id_arr!=[] else -1
+
+
+find_even_index([8,8])
