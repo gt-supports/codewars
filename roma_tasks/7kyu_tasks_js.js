@@ -147,3 +147,10 @@ function divCon(x) {
     }, 0)
     return sumNonString - sumStrings
 }
+
+//https://www.codewars.com/kata/5aa1bcda373c2eb596000112/train/javascript
+
+function maxTriSum(numbers) {
+    const newNums = [...new Set(numbers.sort((a, b) => b - a))]
+    return newNums[0] + newNums[1] + newNums[2]
+}
