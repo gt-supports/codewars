@@ -152,3 +152,14 @@ def product_fib(_prod):
     return [prev, cur, prev*cur ==_prod]
 
 product_fib(4895)
+
+# https://www.codewars.com/kata/52597aa56021e91c93000cb0/train/python
+
+def move_zeros(lst):
+    print(lst.count(0))
+    print([0]*2)
+    print([x for x in lst if x!=0] + [0]*lst.count(0))
+    return [x for x in lst if x!=0] + [0]*lst.count(0)
+
+
+move_zeros([1, 0, 1, 2, 0, 1, 3]) # returns [1, 1, 2, 1, 3, 0, 0]

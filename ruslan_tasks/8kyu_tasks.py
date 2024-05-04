@@ -297,4 +297,21 @@ def validate_code(code):
     print(bool(re.match(r'[1-3]', str(code))))
     return re.match(r'^[1-3]{1}', str(code))!=None
 
-validate_code(143245)
+# validate_code(143245)
+
+
+# https://www.codewars.com/kata/5899642f6e1b25935d000161/train/python
+def merge_arrays(arr1, arr2):
+    # print(sorted(set(arr1+arr2)))
+    return sorted(set(arr1+arr2))
+
+
+# merge_arrays([1,2,3,4], [5,6,7,8])
+
+# https://www.codewars.com/kata/5704aea738428f4d30000914/train/python
+def triple_trouble(one, two, three):
+    # print(one[i]+two[i]+three[i] for i in range(len(one)))
+    print(''.join(''.join(a) for a in zip(one, two, three)))
+    return ''.join(one[i]+two[i]+three[i] for i in range(len(one)))
+
+triple_trouble("aaa","bbb","ccc")
