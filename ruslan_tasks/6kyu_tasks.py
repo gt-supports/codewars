@@ -503,4 +503,9 @@ def decode_morse(morse_code):
 # decode_morse('----- .---- ..--- ---.. ----.')
 
 
+# https://www.codewars.com/kata/585d7d5adb20cf33cb000235/train/python
 
+def find_uniq(arr):
+    return min(arr) if arr.count(min(arr)) == 1 else max(arr)
+
+find_uniq([ 1, 1, 1, 2, 1, 1 ])
