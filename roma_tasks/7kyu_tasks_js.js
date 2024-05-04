@@ -154,3 +154,9 @@ function maxTriSum(numbers) {
     const newNums = [...new Set(numbers.sort((a, b) => b - a))]
     return newNums[0] + newNums[1] + newNums[2]
 }
+
+
+// https://www.codewars.com/kata/52aeb2f3ad0e952f560005d3/train/javascript
+function sortGiftCode(code) {
+    return code.split('').sort().join('')
+}
