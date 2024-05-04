@@ -31,3 +31,15 @@ def arithmetic(a, b, operator):
             return a * b
         case _:
             return a / b
+
+
+# https://www.codewars.com/kata/5259b20d6021e9e14c0010d4/train/python
+
+def reverse_words(text):
+    return " ".join([word[::-1] for word in text.split(" ")])
+
+
+# https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9/train/python
+
+def find_short(s):
+    return len(min(s.split(), key=len))
