@@ -182,4 +182,4 @@ def divisors(integer):
     div = [ x for x in range(2, integer) if integer % x == 0]
     return div if div else f'{integer} is prime'
 
-divisors(37)
+# divisors(37)
