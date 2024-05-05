@@ -203,3 +203,33 @@ def max_tri_sum(numbers):
 # https://www.codewars.com/kata/52aeb2f3ad0e952f560005d3/train/python
 def sort_gift_code(code):
     return ''.join(sorted(code))
+
+
+# https://www.codewars.com/kata/59377c53e66267c8f6000027/train/python
+def alphabet_war(fight):
+    left_side_letters = {
+        'w': 4,
+        'p': 3,
+        'b': 2,
+        's': 1
+    }
+    right_side_letters = {
+        'm': 4,
+        'q': 3,
+        'd': 2,
+        'z': 1
+    }
+    left_side_scores = 0
+    right_side_scores = 0
+
+    for char in fight:
+        if char in left_side_letters:
+            left_side_scores += left_side_letters[char]
+        elif char in right_side_letters:
+            right_side_scores += right_side_letters[char]
+
+    if left_side_scores > right_side_scores:
+        return 'Left side wins!'
+    elif left_side_scores < right_side_scores:
+        return 'Right side wins!'
+    return "Let's fight again!"
