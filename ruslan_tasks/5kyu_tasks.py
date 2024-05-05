@@ -156,10 +156,34 @@ product_fib(4895)
 # https://www.codewars.com/kata/52597aa56021e91c93000cb0/train/python
 
 def move_zeros(lst):
-    print(lst.count(0))
-    print([0]*2)
-    print([x for x in lst if x!=0] + [0]*lst.count(0))
     return [x for x in lst if x!=0] + [0]*lst.count(0)
 
 
 move_zeros([1, 0, 1, 2, 0, 1, 3]) # returns [1, 1, 2, 1, 3, 0, 0]
+
+# https://www.codewars.com/kata/520b9d2ad5c005041100000f/train/python
+import re
+def pig_it(text):
+    print(' '.join(x[1::]+x[0] +'ay' if re.findall(r'[a-zA-Z]', x) else x for x in text.split()))
+    return ' '.join(x[1::]+x[0] +'ay' if re.findall(r'a-zA-Z', x) else x for x in text.split())
+
+# pig_it('Pig latin is cool !')
+
+# https://www.codewars.com/kata/52685f7382004e774f0001f7/train/python
+def make_readable(seconds):
+    HH = seconds//3600 if seconds//3600>9 else '0'+str(seconds//3600)
+    MM = seconds//60%60 if seconds//60%60>9 else '0'+str(seconds//60%60)
+    SS = seconds%60 if seconds%60>9 else '0'+str(seconds%60)
+    # print(f'{HH}:{MM}:{SS}')
+
+    hours, seconds = divmod(seconds, 60**2)
+    minutes, seconds = divmod(seconds, 60)
+    print(hours, minutes, seconds)
+    print('{:02}:{:02}:{:02}'.format(hours, minutes, seconds))
+    print('%02d:%02d:%02d' % (hours, minutes, seconds))
+
+    return f'{HH}:{MM}:{SS}'
+
+make_readable(159055)
+make_readable(86399)
+make_readable(359999)

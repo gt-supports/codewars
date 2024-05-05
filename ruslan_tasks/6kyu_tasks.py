@@ -483,29 +483,48 @@ def solution(s):
 
 # solution('dfdgdgwge')
 
-# https://www.codewars.com/kata/54b724efac3d5402db00065e
-
-def decode_morse(morse_code):
-    a = '.-... ---...   -..-. --...'
-    b = '. .'
-    print(a.split())
-    print(b.split())
-        # return ' '.join(MORSE_CODE[i] for i in morse_code.split(' '))
-    # Remember - you can use the preloaded MORSE_CODE dictionary:
-    # For example:
-    # MORSE_CODE['.-'] = 'A'
-    # MORSE_CODE['--...'] = '7'
-    # MORSE_CODE['...-..-'] = '$'
-    print()
-    pass
-
-
-# decode_morse('----- .---- ..--- ---.. ----.')
-
-
 # https://www.codewars.com/kata/585d7d5adb20cf33cb000235/train/python
 
 def find_uniq(arr):
     return min(arr) if arr.count(min(arr)) == 1 else max(arr)
 
 find_uniq([ 1, 1, 1, 2, 1, 1 ])
+
+# https://www.codewars.com/kata/5839edaa6754d6fec10000a2/train/python
+def find_missing_letter(chars):
+    arr = [ord(i) for i in chars]
+    for id, x in enumerate(arr):
+        if arr[id:id+2][-1]-arr[id:id+2][0] == 2:
+            return chr(arr[id:id+2][0]+1)
+
+
+# find_missing_letter(['a','b','c','d','f'])
+
+# https://www.codewars.com/kata/5277c8a221e209d3f6000b56
+def valid_braces(string):
+    while '{}' in string:
+        string = string.replace('{}', '')
+    while '[]' in string:
+        string = string.replace('[]', '')
+    while '()' in string:
+        string = string.replace('()', '')
+    while '{}' in string:
+        string = string.replace('{}', '')
+    while '[]' in string:
+        string = string.replace('[]', '')
+    while '{}' in string:
+        string = string.replace('{}', '')
+    while '()' in string:
+        string = string.replace('()', '')
+    print(string == '')
+    return string == ''
+
+
+
+
+valid_braces("([{}])")
+# "(){}[]"   =>  True
+# "([{}])"   =>  True
+# "(}"       =>  False
+# "[(])"     =>  False
+# "[({})](]" =>  False
