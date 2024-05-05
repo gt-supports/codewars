@@ -519,12 +519,19 @@ def valid_braces(string):
     print(string == '')
     return string == ''
 
+# valid_braces("([{}])")
 
 
+# https://www.codewars.com/kata/5262119038c0985a5b00029f/train/python
+import math
+def is_prime(num):
+    if num < 2:
+        return False
+    sqrt = int(math.sqrt(num)+1)
+    for i in range(2, sqrt):
+        if num % i == 0:
+            return False
+    return True
 
-valid_braces("([{}])")
-# "(){}[]"   =>  True
-# "([{}])"   =>  True
-# "(}"       =>  False
-# "[(])"     =>  False
-# "[({})](]" =>  False
+
+is_prime(2)
