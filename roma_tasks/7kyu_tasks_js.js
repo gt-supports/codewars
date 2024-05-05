@@ -160,3 +160,35 @@ function maxTriSum(numbers) {
 function sortGiftCode(code) {
     return code.split('').sort().join('')
 }
+
+//https://www.codewars.com/kata/59377c53e66267c8f6000027/train/javascript
+
+function alphabetWar(fight) {
+    const leftSideLetters = {
+        w: 4,
+        p: 3,
+        b: 2,
+        s: 1
+    }
+    const rightSideLetters = {
+        m: 4,
+        q: 3,
+        d: 2,
+        z: 1
+    }
+    let leftSideScores = 0
+    let rightSideScores = 0
+    for (let i = 0; i < fight.length; i++) {
+        if (fight[i] in leftSideLetters) {
+            leftSideScores += leftSideLetters[fight[i]]
+        } else if (fight[i] in rightSideLetters) {
+            rightSideScores += rightSideLetters[fight[i]]
+        }
+    }
+    if (leftSideScores > rightSideScores) {
+        return 'Left side wins!'
+    } else if (leftSideScores < rightSideScores) {
+        return 'Right side wins!'
+    }
+    return "Let's fight again!"
+}
