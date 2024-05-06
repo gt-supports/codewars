@@ -192,3 +192,18 @@ function alphabetWar(fight) {
     }
     return "Let's fight again!"
 }
+
+// https://www.codewars.com/kata/5a431c0de1ce0ec33a00000c/train/javascript
+function evenNumbers(array, number) {
+    const newArray = array.filter(num => num % 2 === 0)
+    const finalArr = []
+    for (i = newArray.length - number; i < newArray.length; i++) {
+        if (newArray[i] !== undefined) {
+            finalArr.push(newArray[i])
+        }
+    }
+    return finalArr
+}
+
+// best practice
+const evenNumbers = (array, number) => array.filter(item => item % 2 === 0).slice(-number);

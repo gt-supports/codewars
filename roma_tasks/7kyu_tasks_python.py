@@ -233,3 +233,8 @@ def alphabet_war(fight):
     elif left_side_scores < right_side_scores:
         return 'Right side wins!'
     return "Let's fight again!"
+
+
+# https://www.codewars.com/kata/5a431c0de1ce0ec33a00000c/solutions/python
+def even_numbers(arr, n):
+    return [i for i in arr if i % 2 == 0][-n:]
