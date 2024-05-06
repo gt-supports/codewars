@@ -534,4 +534,21 @@ def is_prime(num):
     return True
 
 
-is_prime(2)
+# is_prime(2)
+
+# https://www.codewars.com/kata/56a5d994ac971f1ac500003e/train/python
+def longest_consec(strarr, k):
+    if len(strarr) == 0 or k > len(strarr) or k <= 0:
+        return ""
+    print([''.join([strarr[i+k] for k in range(k)]) for i in range(len(strarr)-k+1)])
+    arr = [''.join([strarr[i+k] for k in range(k)]) for i in range(len(strarr)-k+1)]
+    arr_len = [len(x) for x in arr]
+    print(arr[arr_len.index(max(arr_len))])
+    return arr[arr_len.index(max(arr_len))]
+
+
+# longest_consec(["zone", "abigail", "theta", "form", "libe", "zas"], 2)
+
+longest_consec(["it","wkppv","ixoyx", "3452", "zzzzzzzzzzzz"], 3)
+
+# "abigailtheta"
