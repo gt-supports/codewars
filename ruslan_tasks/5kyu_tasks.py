@@ -184,6 +184,45 @@ def make_readable(seconds):
 
     return f'{HH}:{MM}:{SS}'
 
-make_readable(159055)
-make_readable(86399)
-make_readable(359999)
+# make_readable(159055)
+# make_readable(86399)
+# make_readable(359999)
+
+
+# https://www.codewars.com/kata/513e08acc600c94f01000001/train/python
+def rgb(r, g, b):
+    if r < 0:
+        r = 0
+    elif r > 255:
+        r = 255
+    if g < 0:
+        g = 0
+    elif g > 255:
+        g = 255
+    if b < 0:
+        b = 0
+    elif b > 255:
+        b = 255
+
+    if r < 16:
+        r = '0' + str(hex(r)[2:].upper())
+    else:
+        r= str(hex(r)[2:].upper())
+
+    if g < 16:
+        g = '0' + str(hex(g)[2:].upper())
+    else:
+        g= str(hex(g)[2:].upper())
+
+    if b < 16:
+        b = '0' + str(hex(b)[2:].upper())
+    else:
+        b = str(hex(b)[2:].upper())
+
+    return ''.join([r, g, b])
+
+rgb(-20, 275, 125)
+
+
+rgb(254, 253, 252)
+# "FEFDFC"
