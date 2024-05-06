@@ -27,6 +27,7 @@ def double_char(s):
 def say_hello(name):
     return f"Hello, {name}"
 
+
 # https://www.codewars.com/kata/57f24e6a18e9fad8eb000296/train/python
 
 def how_much_i_love_you(nb_petals):
@@ -39,3 +40,12 @@ def how_much_i_love_you(nb_petals):
         0: "not at all"
     }
     return petals[nb_petals % 6]
+
+
+# https://www.codewars.com/kata/555a67db74814aa4ee0001b5/train/python
+
+def is_even(n):
+    if n % 2 == 0 or n % 2 % 2 == 0:
+        return True
+    else:
+        return False

@@ -53,3 +53,10 @@ def filter_list(l):
         if type(i) is int:
             new_list.append(i)
     return new_list
+
+
+# https://www.codewars.com/kata/57f609022f4d534f05000024/train/python
+
+def stray(arr):
+    nums = [i for i in arr if arr.count(i) == 1]
+    return nums[0]
