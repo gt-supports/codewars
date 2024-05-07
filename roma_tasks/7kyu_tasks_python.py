@@ -238,3 +238,8 @@ def alphabet_war(fight):
 # https://www.codewars.com/kata/5a431c0de1ce0ec33a00000c/solutions/python
 def even_numbers(arr, n):
     return [i for i in arr if i % 2 == 0][-n:]
+
+
+# https://www.codewars.com/kata/55b051fac50a3292a9000025/train/python
+def filter_string(st):
+    return int(''.join([i for i in st if i.isdigit()]))
