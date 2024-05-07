@@ -568,3 +568,28 @@ a2 = ["lively", "alive", "harp", "sharp", "armstrong"]
 r = ['arp']
 
 in_array(a1, a2)
+
+# https://www.codewars.com/kata/51b62bf6a9c58071c600001b/train/python
+def roman_solution(n):
+    thousand = n//1000
+    hundreds  = (n%1000)//100
+    decimals = (n%100)//10
+    dig = n%10
+    num = ('M'*thousand + ('CM' if hundreds == 9 else "D"+"C"*(hundreds-5) if hundreds>=5
+                            else "CD" if hundreds == 4 else "C"*hundreds)+
+                        ('XC' if decimals == 9 else "L"+"X"*(decimals-5) if decimals>=5
+                            else "XL" if decimals == 4 else "X"*decimals) +
+                        ('IX' if dig == 9 else "V" + "I" * (dig - 5) if dig >= 5
+                        else "IV" if dig == 4 else "I" * dig))
+    return num
+
+roman_solution(2589)
+
+# Symbol    Value
+# I          1
+# V          5
+# X          10
+# L          50
+# C          100
+# D          500
+# M          1,000
