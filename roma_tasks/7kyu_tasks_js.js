@@ -207,3 +207,10 @@ function evenNumbers(array, number) {
 
 // best practice
 const evenNumbers = (array, number) => array.filter(item => item % 2 === 0).slice(-number);
+
+
+//https://www.codewars.com/kata/55b051fac50a3292a9000025/train/javascript
+
+var filterString = function (value) {
+    return Number(value.split('').filter(item => !isNaN(item)).join(''))
+}
