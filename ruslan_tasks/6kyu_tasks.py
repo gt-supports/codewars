@@ -549,6 +549,22 @@ def longest_consec(strarr, k):
 
 # longest_consec(["zone", "abigail", "theta", "form", "libe", "zas"], 2)
 
-longest_consec(["it","wkppv","ixoyx", "3452", "zzzzzzzzzzzz"], 3)
+# longest_consec(["it","wkppv","ixoyx", "3452", "zzzzzzzzzzzz"], 3)
 
 # "abigailtheta"
+
+# https://www.codewars.com/kata/550554fd08b86f84fe000a58/train/python
+def in_array(array1, array2):
+    arr = []
+    for x in array1:
+        for y in array2:
+            if x in y and x not in arr:
+                arr.append(x)
+    return sorted(arr)
+
+
+a1 = ["arp", "mice", "bull"]
+a2 = ["lively", "alive", "harp", "sharp", "armstrong"]
+r = ['arp']
+
+in_array(a1, a2)
