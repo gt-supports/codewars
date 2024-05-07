@@ -60,3 +60,15 @@ def filter_list(l):
 def stray(arr):
     nums = [i for i in arr if arr.count(i) == 1]
     return nums[0]
+
+
+# https://www.codewars.com/kata/5949481f86420f59480000e7/train/python
+
+def odd_or_even(arr):
+    return "even" if sum(arr) % 2 == 0 else "odd"
+
+
+# https://www.codewars.com/kata/51f2b4448cadf20ed0000386/train/python
+
+def remove_url_anchor(url):
+    return url.split("#")[0]
