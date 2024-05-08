@@ -72,3 +72,21 @@ def odd_or_even(arr):
 
 def remove_url_anchor(url):
     return url.split("#")[0]
+
+
+# https://www.codewars.com/kata/545a4c5a61aa4c6916000755/train/python
+
+def gimme(input_array):
+    return input_array.index(sorted(input_array)[1])
+
+
+# https://www.codewars.com/kata/55b42574ff091733d900002f/train/python
+
+def friend(x):
+    massive_friend = []
+    for i in x:
+        if len(i) == 4:
+            massive_friend.append(i)
+        else:
+            continue
+    return massive_friend
