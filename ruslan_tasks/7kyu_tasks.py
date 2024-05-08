@@ -189,4 +189,13 @@ def divisors(integer):
 def sum_digits(number):
     return sum(int(x) for x in str(abs(number)))
 
-sum_digits(-32)
+# sum_digits(-32)
+
+# https://www.codewars.com/kata/58b8c94b7df3f116eb00005b
+def reverse_letter(st):
+    return ''.join([x for x in st if x.isalpha()][::-1])
+
+
+reverse_letter("ultr53o?n")
+
+# For str = "ultr53o?n", the output should be "nortlu".
