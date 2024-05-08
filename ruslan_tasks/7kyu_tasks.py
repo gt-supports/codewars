@@ -183,3 +183,10 @@ def divisors(integer):
     return div if div else f'{integer} is prime'
 
 # divisors(37)
+
+
+# https://www.codewars.com/kata/52f3149496de55aded000410/train/python
+def sum_digits(number):
+    return sum(int(x) for x in str(abs(number)))
+
+sum_digits(-32)
