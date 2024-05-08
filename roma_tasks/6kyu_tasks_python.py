@@ -243,3 +243,20 @@ def even_numbers(arr, n):
 # https://www.codewars.com/kata/55b051fac50a3292a9000025/train/python
 def filter_string(st):
     return int(''.join([i for i in st if i.isdigit()]))
+
+
+# https://www.codewars.com/kata/514b92a657cdc65150000006/train/python
+
+def solution(number):
+    sum = 0;
+    if number < 0:
+        return 0
+    for i in range(1, number):
+        if i % 3 == 0 or i % 5 == 0:
+            sum += i
+    return sum
+
+
+# best practise(rewriting)
+def solution_second(number):
+    return sum(i for i in range(number) if i % 3 == 0 or i % 5 == 0)
