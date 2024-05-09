@@ -25,3 +25,24 @@ function likes(names) {
     }
     return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`
 }
+
+//https://www.codewars.com/kata/54da5a58ea159efa38000836/train/javascript
+
+function findOdd(A) {
+    const map = A.reduce((acc, cur) => {
+        acc[cur] = cur in acc ? acc[cur] + 1 : 1
+        return acc
+    }, {})
+
+    for (let key in map) {
+        if (map[key] % 2 !== 0) {
+            return Number(key)
+        }
+    }
+}
+
+//https://www.codewars.com/kata/5264d2b162488dc400000001/train/javascript
+
+function spinWords(string) {
+    return string.split(' ').map(item => item.length >= 5 ? item.split('').reverse().join('') : item).join(' ')
+}

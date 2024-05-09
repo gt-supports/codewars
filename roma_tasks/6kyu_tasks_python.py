@@ -260,3 +260,10 @@ def solution(number):
 # best practise(rewriting)
 def solution_second(number):
     return sum(i for i in range(number) if i % 3 == 0 or i % 5 == 0)
+
+
+# https://www.codewars.com/kata/54da5a58ea159efa38000836/train/python
+def find_it(seq):
+    for i in seq:
+        if (seq.count(i) % 2 != 0):
+            return i
