@@ -105,3 +105,21 @@ def small_enough(array, limit):
         if num > limit:
             return False
     return True
+
+
+# https://www.codewars.com/kata/529eef7a9194e0cbc1000255/train/python
+
+def is_anagram(test, original):
+    return True if sorted(test.lower()) == sorted(original.lower()) else False
+
+
+# https://www.codewars.com/kata/539ee3b6757843632d00026b/train/python
+
+def capitals(word):
+    indexes = []
+
+    for index, char in enumerate(word):
+        if char.isupper():
+            indexes.append(index)
+
+    return indexes
