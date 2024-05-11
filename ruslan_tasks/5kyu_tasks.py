@@ -226,3 +226,20 @@ rgb(-20, 275, 125)
 
 rgb(254, 253, 252)
 # "FEFDFC"
+
+# https://www.codewars.com/kata/550f22f4d758534c1100025a/train/python
+def dir_reduc(arr):
+    text = '_'.join(arr)
+    while 'NORTH_SOUTH' in text or 'SOUTH_NORTH' in text or 'EAST_WEST' in text or 'WEST_EAST' in text:
+        text = text.replace('NORTH_SOUTH', '')
+        text = text.replace('SOUTH_NORTH', '')
+        text = text.replace('EAST_WEST', '')
+        text = text.replace('WEST_EAST', '')
+        text = text.split("_")
+        text = '_'.join(x for x in text if x!='')
+    return text.split('_') if text!='' else []
+
+
+
+dir_reduc(["NORTH", "SOUTH"])
+ # ['WEST']
