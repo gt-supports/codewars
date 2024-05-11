@@ -90,3 +90,36 @@ def friend(x):
         else:
             continue
     return massive_friend
+
+
+# https://www.codewars.com/kata/54bf85e3d5b56c7a05000cf9/train/python
+
+def number(lines):
+    return ["{}: {}".format(i + 1, v) for i, v in enumerate(lines)]
+
+
+# https://www.codewars.com/kata/57cc981a58da9e302a000214/train/python
+
+def small_enough(array, limit):
+    for num in array:
+        if num > limit:
+            return False
+    return True
+
+
+# https://www.codewars.com/kata/529eef7a9194e0cbc1000255/train/python
+
+def is_anagram(test, original):
+    return True if sorted(test.lower()) == sorted(original.lower()) else False
+
+
+# https://www.codewars.com/kata/539ee3b6757843632d00026b/train/python
+
+def capitals(word):
+    indexes = []
+
+    for index, char in enumerate(word):
+        if char.isupper():
+            indexes.append(index)
+
+    return indexes
