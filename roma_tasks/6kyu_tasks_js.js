@@ -27,7 +27,6 @@ function likes(names) {
 }
 
 //https://www.codewars.com/kata/54da5a58ea159efa38000836/train/javascript
-
 function findOdd(A) {
     const map = A.reduce((acc, cur) => {
         acc[cur] = cur in acc ? acc[cur] + 1 : 1
@@ -42,7 +41,26 @@ function findOdd(A) {
 }
 
 //https://www.codewars.com/kata/5264d2b162488dc400000001/train/javascript
-
 function spinWords(string) {
     return string.split(' ').map(item => item.length >= 5 ? item.split('').reverse().join('') : item).join(' ')
+}
+
+//https://www.codewars.com/kata/5526fc09a1bbd946250002dc/train/javascript
+function findOutlier(integers) {
+    const oddInts = integers.filter(num => num % 2 !== 0)
+    const evenInts = integers.filter(num => num % 2 === 0)
+    return oddInts.length > evenInts.length ? evenInts[0] : oddInts[0]
+}
+
+//https://www.codewars.com/kata/545cedaa9943f7fe7b000048/train/javascript
+function isPangram(string) {
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    const strSet = new Set()
+
+    string.split('').forEach(item => {
+        if (alphabet.includes(item.toLowerCase())) {
+            strSet.add(item.toLowerCase())
+        }
+    })
+    return strSet.size === 26
 }
