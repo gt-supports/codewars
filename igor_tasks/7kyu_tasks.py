@@ -139,3 +139,13 @@ def reverse_letter(st):
         if i.isalpha():
             result += i
     return result[::-1]
+
+
+# https://www.codewars.com/kata/56747fd5cb988479af000028/train/python
+
+def get_middle(s):
+    length = len(s)
+    if length % 2 == 0:
+        return s[length // 2 - 1] + s[length // 2]
+    else:
+        return s[length // 2]
