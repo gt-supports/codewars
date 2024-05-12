@@ -241,5 +241,32 @@ def dir_reduc(arr):
 
 
 
-dir_reduc(["NORTH", "SOUTH"])
+# dir_reduc(["NORTH", "SOUTH"])
  # ['WEST']
+
+# https://www.codewars.com/kata/530e15517bc88ac656000716
+def rot13(message):
+    print(ord('s'))
+    print(ord('a'))
+    print(ord('z'))
+    print(ord('f'))
+    arr = []
+    for x in message:
+        if x.isalpha():
+            if 65 <= ord(x) < 78 or 97 <= ord(x) < 110:
+                arr.append(ord(x)+13)
+            elif 110 <= ord(x) <= 122:
+                arr.append(97-122+ord(x)+12)
+            elif 78 <= ord(x) <= 90:
+                arr.append(65-90+ord(x)+12)
+        else:
+            arr.append(ord(x))
+    print(''.join([chr(x) for x in arr]))
+    return ''.join([chr(x) for x in arr])
+
+
+# test.assert_equals(rot13('test'), 'grfg', 'Returned solution incorrect for fixed string = test')
+# test.assert_equals(rot13('Test'), 'Grfg', 'Returned solution incorrect for fixed string = Test')
+# test.assert_equals(rot13('aA bB zZ 1234 *!?%'), 'nN oO mM 1234 *!?%'
+
+rot13('AaTtSs')
