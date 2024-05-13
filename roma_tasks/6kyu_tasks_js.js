@@ -64,3 +64,21 @@ function isPangram(string) {
     })
     return strSet.size === 26
 }
+
+//https://www.codewars.com/kata/585d7d5adb20cf33cb000235/train/javascript
+function findUniq(arr) {
+    return arr.find(item => arr.indexOf(item) === arr.lastIndexOf(item))
+}
+
+//https://www.codewars.com/kata/5208f99aee097e6552000148/train/javascript
+function solution(string) {
+    let result = '';
+    for (let i = 0; i < string.length; i++) {
+        if (string[i].toUpperCase() === string[i]) {
+            result += ' ' + string[i]
+        } else {
+            result += string[i]
+        }
+    }
+    return result
+}

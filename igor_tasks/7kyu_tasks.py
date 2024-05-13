@@ -123,3 +123,19 @@ def capitals(word):
             indexes.append(index)
 
     return indexes
+
+
+# https://www.codewars.com/kata/558fc85d8fd1938afb000014/train/python
+
+def sum_two_smallest_numbers(numbers):
+    return sorted(numbers)[0] + sorted(numbers)[1]
+
+
+# https://www.codewars.com/kata/58b8c94b7df3f116eb00005b/train/python
+
+def reverse_letter(st):
+    result = ""
+    for i in st:
+        if i.isalpha():
+            result += i
+    return result[::-1]
