@@ -269,4 +269,12 @@ def rot13(message):
 # test.assert_equals(rot13('Test'), 'Grfg', 'Returned solution incorrect for fixed string = Test')
 # test.assert_equals(rot13('aA bB zZ 1234 *!?%'), 'nN oO mM 1234 *!?%'
 
-rot13('AaTtSs')
+# rot13('AaTtSs')
+
+# https://www.codewars.com/kata/52449b062fb80683ec000024/train/python
+def generate_hashtag(s=''):
+    s.capitalize()
+    result = '#'+''.join([x.capitalize() for x in s.split()])
+    return result if s!='' and len(result)<=140 else False
+
+generate_hashtag('CoDeWaRs   is niCe')
