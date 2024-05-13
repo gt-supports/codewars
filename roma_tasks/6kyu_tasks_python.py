@@ -274,3 +274,4 @@ def is_pangram(st):
     alphabet = set('abcdefghijklmnopqrstuvwxyz')
     s = set(st.lower())
     return alphabet <= s
+

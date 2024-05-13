@@ -82,3 +82,15 @@ function solution(string) {
     }
     return result
 }
+
+//https://www.codewars.com/kata/54b724efac3d5402db00065e/train/javascript
+
+decodeMorse = function (morseCode) {
+    const morseCodeClean = morseCode.trim();
+
+    const words = morseCodeClean.split('   ');
+
+    return words.map(word =>
+        word.split(' ').map(letter => MORSE_CODE[letter.trim()]).join('')
+    ).join(' ');
+}
