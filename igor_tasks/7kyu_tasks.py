@@ -167,3 +167,15 @@ def sum_digits(number):
         number //= 10
 
     return sum
+
+
+# https://www.codewars.com/kata/57ea5b0b75ae11d1e800006c/train/python
+
+def sort_by_length(arr):
+    return sorted(arr, key=len)
+
+
+# https://www.codewars.com/kata/5174a4c0f2769dd8b1000003/train/python
+
+def solution(nums):
+    return sorted(nums) if isinstance(nums, list) else []
