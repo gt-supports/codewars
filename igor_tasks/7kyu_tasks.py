@@ -149,3 +149,33 @@ def get_middle(s):
         return s[length // 2 - 1] + s[length // 2]
     else:
         return s[length // 2]
+
+
+# https://www.codewars.com/kata/558fc85d8fd1938afb000014/train/python
+
+def sum_two_smallest_numbers(numbers):
+    return sorted(numbers)[0] + sorted(numbers)[1]
+
+
+# https://www.codewars.com/kata/52f3149496de55aded000410/train/python
+
+def sum_digits(number):
+    sum = 0
+    number = abs(number)
+    while number > 0:
+        sum += number % 10
+        number //= 10
+
+    return sum
+
+
+# https://www.codewars.com/kata/57ea5b0b75ae11d1e800006c/train/python
+
+def sort_by_length(arr):
+    return sorted(arr, key=len)
+
+
+# https://www.codewars.com/kata/5174a4c0f2769dd8b1000003/train/python
+
+def solution(nums):
+    return sorted(nums) if isinstance(nums, list) else []
