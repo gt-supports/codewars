@@ -275,6 +275,49 @@ def rot13(message):
 def generate_hashtag(s=''):
     s.capitalize()
     result = '#'+''.join([x.capitalize() for x in s.split()])
-    return result if s!='' and len(result)<=140 else False
+    return result if s != '' and len(result) <= 140 else False
 
-generate_hashtag('CoDeWaRs   is niCe')
+# generate_hashtag('CoDeWaRs   is niCe')
+
+# https://www.codewars.com/kata/54521e9ec8e60bc4de000d6c
+def max_sequence(arr):
+    if arr == []: return 0
+    cur_sum = 0
+    max_sum = 0
+    for x in arr:
+        cur_sum += x
+        if cur_sum < 0:
+            cur_sum = 0
+        elif max_sum < cur_sum:
+            max_sum = cur_sum
+    return max_sum
+
+
+
+    #работает но долго
+    # if arr == []: return 0
+    # max_arr = []
+    # max_sum = 0
+    # for x in arr:
+    #     max_arr.append(x)
+    #     if sum(max_arr) < 0:
+    #         max_arr = []
+    #     elif max_sum < sum(max_arr):
+    #         max_sum = sum(max_arr)
+    # return max_sum
+
+
+
+
+max_sequence([-2, 14, -4, -10, 2, 19, -18, -18, -20, -15, -2, 13, -6, -15, 5, -3, -1]
+)
+
+max_sequence([7, 4, 11, -11, 39, 36, 10, -6, 37, -10, -32, 44, -26, -34, 43, 43])
+
+# max_sequence([5, -11, 3, -20, -15, -18, 17, 3, 7, -19, 6, 11])
+
+# max_sequence([7, 4, 11, -11, 39, 36, 10, -6, 37, -10, -32, 44, -26, -34, 43, 43])
+    # , 155
+# max_sequence([-1, 20, -2, 18, 1, -10, 0, -17, -5, 20, 5, 5, -18, -18, -14, 12, 5, 19, -4])
+
+# should be 37
