@@ -623,4 +623,48 @@ def roman_to_dec_solution(str):
     return num
 
 
-roman_to_dec_solution("MDCLXVI")
+# roman_to_dec_solution("MDCLXVI")
+
+# https://www.codewars.com/kata/59daf400beec9780a9000045/train/python
+def name_in_str(strng : str, name : str) -> bool:
+    letters = [x for x in name.lower() if x in strng.lower() ]
+    print(letters)
+    if len(letters) != len(name):
+        print("1 False")
+        return False
+    count_letters_set = [name.lower().count(x) for x in set(letters)]
+    count_letters_strn = [strng.lower().count(x) for x in set(letters)]
+    check_amount = [1 if count_letters_set[i]<=count_letters_strn[i] else 0 for i, x in enumerate(count_letters_set)]
+    if sum(check_amount) != len(check_amount):
+        print("2 False")
+        return False
+
+    id_strng =[id for id, x in enumerate(strng.lower()) if x in letters]
+    print([x for x in id_strng if strng.lower()[id] ])
+
+    for i, x in enumerate(strng.lower()):
+        if x in letters and
+
+
+    order_lst = [ x for x in strng.lower()  if x in letters]
+    check_order = [1 if letters[i] == order_lst[i] else 0 for i, x in enumerate(letters) ]
+    print(order_lst)
+    if sum(check_order) != len(check_order):
+        print("3 False")
+        return False
+    print(True)
+    return True
+
+
+
+
+name_in_str("Across the rivers", "chris")  #True)
+# name_in_str("Next to a lake", "chris") # False)
+# name_in_str("Under a sea", "chris") # False)
+# name_in_str("A crew that boards the ship", "chris") # False)
+# name_in_str("A live son l ", "Allison") # False)
+# name_in_str("Just enough nice friends", "Jennifer") # False)
+# name_in_str("thomas", "Thomas") # True)
+# name_in_str("pippippi", "Pippi") # True)
+# name_in_str("pipipp", "Pippi") # False)
+# name_in_str("ppipip", "Pippi") # False)
