@@ -274,3 +274,40 @@ def is_pangram(st):
     alphabet = set('abcdefghijklmnopqrstuvwxyz')
     s = set(st.lower())
     return alphabet <= s
+
+
+# https://www.codewars.com/kata/578aa45ee9fd15ff4600090d/train/python
+def sort_array(source_array):
+    odd_sorted_arr = sorted([i for i in source_array if i % 2 != 0])
+
+    odd_index = 0
+
+    result_array = []
+
+    for num in source_array:
+        if num % 2 != 0:
+            result_array.append(odd_sorted_arr[odd_index])
+            odd_index += 1
+        else:
+            result_array.append(num)
+
+    return result_array
+
+
+# https://www.codewars.com/kata/57eb8fcdf670e99d9b000272/train/python
+def high(x):
+    words = x.lower().split(' ')
+    final_sum = 0
+    final_index = 0
+
+    for index, word in enumerate(words):
+        sum = 0
+
+        for char in word:
+            sum += ord(char) - 96
+
+        if (final_sum < sum):
+            final_sum = sum
+            final_index = index
+
+    return words[final_index]
