@@ -311,3 +311,12 @@ def high(x):
             final_index = index
 
     return words[final_index]
+
+
+# https://www.codewars.com/kata/554ca54ffa7d91b236000023/train/python
+def delete_nth(arr, n):
+    final_arr = []
+    for item in arr:
+        if final_arr.count(item) < n:
+            final_arr.append(item)
+    return final_arr

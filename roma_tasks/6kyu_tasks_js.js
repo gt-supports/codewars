@@ -139,3 +139,17 @@ function high(x) {
     }
     return words[maxScoreIndex]
 }
+
+//13 https://www.codewars.com/kata/554ca54ffa7d91b236000023/train/javascript
+
+function deleteNth(arr, n) {
+    const finalArr = [];
+    for (const i in arr) {
+        if (finalArr.filter(item => item === arr[i]).length === n) {
+            continue
+        } else {
+            finalArr.push(arr[i])
+        }
+    }
+    return finalArr
+}
