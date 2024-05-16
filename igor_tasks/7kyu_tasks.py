@@ -195,3 +195,20 @@ def check_exam(arr1, arr2):
             score -= 1
 
     return score if score >= 0 else 0
+
+
+# https://www.codewars.com/kata/5ac6932b2f317b96980000ca/train/python
+
+def min_value(digits):
+    str_digits = ''.join(str(i) for i in sorted(set(digits)))
+    nums = ""
+
+    for i in str_digits:
+        nums += i
+    return int(nums)
+
+
+# https://www.codewars.com/kata/57ee99a16c8df7b02d00045f/train/python
+
+def flatten_and_sort(array):
+    return sorted([element for row in array for element in row])
