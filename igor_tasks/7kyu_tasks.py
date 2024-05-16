@@ -199,6 +199,7 @@ def check_exam(arr1, arr2):
 
 # https://www.codewars.com/kata/5ac6932b2f317b96980000ca/train/python
 
+
 def min_value(digits):
     str_digits = ''.join(str(i) for i in sorted(set(digits)))
     nums = ""
