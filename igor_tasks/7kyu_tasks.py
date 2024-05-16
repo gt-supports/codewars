@@ -210,5 +210,6 @@ def min_value(digits):
 
 # https://www.codewars.com/kata/57ee99a16c8df7b02d00045f/train/python
 
+
 def flatten_and_sort(array):
     return sorted([element for row in array for element in row])
