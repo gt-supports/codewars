@@ -179,3 +179,38 @@ def sort_by_length(arr):
 
 def solution(nums):
     return sorted(nums) if isinstance(nums, list) else []
+
+
+# https://www.codewars.com/kata/5a3dd29055519e23ec000074/train/python
+
+def check_exam(arr1, arr2):
+    score = 0
+
+    for i in range(0, 4):
+        if arr1[i] == arr2[i]:
+            score += 4
+        elif arr2[i] == "":
+            continue
+        else:
+            score -= 1
+
+    return score if score >= 0 else 0
+
+
+# https://www.codewars.com/kata/5ac6932b2f317b96980000ca/train/python
+
+
+def min_value(digits):
+    str_digits = ''.join(str(i) for i in sorted(set(digits)))
+    nums = ""
+
+    for i in str_digits:
+        nums += i
+    return int(nums)
+
+
+# https://www.codewars.com/kata/57ee99a16c8df7b02d00045f/train/python
+
+
+def flatten_and_sort(array):
+    return sorted([element for row in array for element in row])
