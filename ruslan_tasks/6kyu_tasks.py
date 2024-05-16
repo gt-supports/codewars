@@ -135,17 +135,7 @@ def queue_time(customers, n):
                     cust_len -= 1
         return queue
 
-# https://www.codewars.com/kata/58f5c63f1e26ecda7e000029/train/python
-def wave(people):
-    my_list = people.partition(" ")
-    print(my_list)
-    my_wave = []
-    for word in my_list:
-        new_word = [word[:j:] + word[j].upper() + word[j+1::] for j in range(len(word))]
-        my_wave += new_word
 
-    print(my_wave)
-    return my_wave
 
 # https://www.codewars.com/kata/5208f99aee097e6552000148/train/python
 def solution(s):
@@ -668,3 +658,11 @@ name_in_str("Across the rivers", "chris")  #True)
 # name_in_str("pippippi", "Pippi") # True)
 # name_in_str("pipipp", "Pippi") # False)
 # name_in_str("ppipip", "Pippi") # False)
+
+# https://www.codewars.com/kata/58f5c63f1e26ecda7e000029/train/python
+def wave(people):
+    my_wave = []
+    for i in range(len(people)):
+        if people[i] != ' ':
+            my_wave += [people[:i] + people[i].upper() + people[i+1:]]
+    return my_wave

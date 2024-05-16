@@ -307,6 +307,9 @@ def max_sequence(arr):
     # return max_sum
 
 
+test = [1,2,3,4,5]
+print(test[:-2])
+print(round(10/2, 2))
 
 
 max_sequence([-2, 14, -4, -10, 2, 19, -18, -18, -20, -15, -2, 13, -6, -15, 5, -3, -1]
