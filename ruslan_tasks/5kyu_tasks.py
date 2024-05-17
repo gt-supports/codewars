@@ -308,14 +308,13 @@ def max_sequence(arr):
 
 
 test = [1,2,3,4,5]
-print(test[:-2])
-print(round(10/2, 2))
+# print(test[:-2])
+# print(round(10/2, 2))
 
 
-max_sequence([-2, 14, -4, -10, 2, 19, -18, -18, -20, -15, -2, 13, -6, -15, 5, -3, -1]
-)
+# max_sequence([-2, 14, -4, -10, 2, 19, -18, -18, -20, -15, -2, 13, -6, -15, 5, -3, -1])
 
-max_sequence([7, 4, 11, -11, 39, 36, 10, -6, 37, -10, -32, 44, -26, -34, 43, 43])
+# max_sequence([7, 4, 11, -11, 39, 36, 10, -6, 37, -10, -32, 44, -26, -34, 43, 43])
 
 # max_sequence([5, -11, 3, -20, -15, -18, 17, 3, 7, -19, 6, 11])
 
@@ -324,3 +323,21 @@ max_sequence([7, 4, 11, -11, 39, 36, 10, -6, 37, -10, -32, 44, -26, -34, 43, 43]
 # max_sequence([-1, 20, -2, 18, 1, -10, 0, -17, -5, 20, 5, 5, -18, -18, -14, 12, 5, 19, -4])
 
 # should be 37
+
+# https://www.codewars.com/kata/525c65e51bf619685c000059/train/python
+def cakes(recipe, available):
+    # print(recipe['flour'])
+    # print('flour' in recipe)
+    # print('test' not in recipe)
+    # print([x for x in recipe])
+    num = []
+    for x in recipe:
+        if x not in available:
+            return 0
+        num.append(available[x]//recipe[x])
+    return min(num)
+
+# must return 2
+cakes({'flour': 500, 'sugar': 200, 'eggs': 1}, {'flour': 1200, 'sugar': 1200, 'eggs': 5, 'milk': 200})
+# must return 0
+cakes({'apples': 3, 'flour': 300, 'sugar': 150, 'milk': 100, 'oil': 100}, {'sugar': 500, 'flour': 2000, 'milk': 2000})
