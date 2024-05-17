@@ -153,3 +153,17 @@ function deleteNth(arr, n) {
     }
     return finalArr
 }
+
+//14 https://www.codewars.com/kata/52efefcbcdf57161d4000091/train/javascript
+
+function count(string) {
+    const map = {}
+    for (const value of string) {
+        if (value in map) {
+            map[value] += 1;
+        } else {
+            map[value] = 1;
+        }
+    }
+    return map;
+}

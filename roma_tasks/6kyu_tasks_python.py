@@ -320,3 +320,11 @@ def delete_nth(arr, n):
         if final_arr.count(item) < n:
             final_arr.append(item)
     return final_arr
+
+
+# https://www.codewars.com/kata/52efefcbcdf57161d4000091/train/python
+def count(s):
+    char_map = {}
+    for i in s:
+        char_map[i] = s.count(i)
+    return char_map
