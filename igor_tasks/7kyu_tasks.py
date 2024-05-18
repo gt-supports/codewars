@@ -234,3 +234,16 @@ def maskify(cc):
         return "#" * (len(cc) - 4) + cc[-4:]
     else:
         return cc
+
+
+# https://www.codewars.com/kata/551f37452ff852b7bd000139/train/python
+
+def add_binary(a, b):
+    sum_bin = bin(a + b)
+    return ''.join(i for i in sum_bin if i.isdigit())[1::]
+
+
+# https://www.codewars.com/kata/586f6741c66d18c22800010a/train/python
+
+def sequence_sum(begin_number, end_number, step):
+    return sum(range(begin_number, end_number + 1, step))
