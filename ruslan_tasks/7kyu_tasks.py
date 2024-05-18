@@ -204,3 +204,62 @@ reverse_letter("ultr53o?n")
 def check_exam(arr1,arr2):
     summa = sum(0 if arr2[i] == '' else 4 if arr1[i] == arr2[i] else -1 for i,x in enumerate(arr1))
     return summa if summa > 0 else 0
+
+
+
+# https://www.codewars.com/kata/5b180e9fedaa564a7000009a/train/python
+def solve_1(s):
+    return s.lower() if sum(1 for x in s if x.islower()) >= len(s) / 2 else s.upper()
+
+
+# https://www.codewars.com/kata/5ac6932b2f317b96980000ca/train/python
+def min_value(digits):
+    return int(''.join([str(x) for x in sorted(set(digits))]))
+
+
+# min_value([4, 8, 1, 4])
+
+# https://www.codewars.com/kata/59cfc000aeb2844d16000075/train/python
+def capitalize(s):
+    even = ''.join(x.upper() if i%2==0 else x for i, x in enumerate(s)  )
+    odds = ''.join(x.upper() if i % 2 == 1 else x for i, x in enumerate(s))
+    return [even, odds]
+
+# capitalize("abcdef")
+# ,['AbCdEf', 'aBcDeF'])
+
+# https://www.codewars.com/kata/54ff0d1f355cfd20e60001fc/train/python
+def factorial(n):
+    x = 1
+    for y in range(1, n+1):
+        x *= y
+    return 'ValueError ' if n < 0 or n > 12 else 1 if n == 0 else x
+
+# factorial(5)
+# factorial(1)
+
+class Fighter(object):
+    def __init__(self, name, health, damage_per_attack):
+        self.name = name
+        self.health = health
+        self.damage_per_attack = damage_per_attack
+
+    def __str__(self): return "Fighter({}, {}, {})".format(self.name, self.health, self.damage_per_attack)
+
+    __repr__ = __str__
+
+# https://www.codewars.com/kata/577bd8d4ae2807c64b00045b/train/python
+def declare_winner(fighter1, fighter2, first_attacker):
+    while fighter1.health>0 and fighter2.health>0:
+        if fighter1.name == first_attacker:
+            fighter2.health -= fighter1.damage_per_attack
+            if fighter2.health>0:
+                fighter1.health -= fighter2.damage_per_attack
+        else:
+            fighter1.health -= fighter2.damage_per_attack
+            if fighter1.health>0:
+                fighter2.health -= fighter1.damage_per_attack
+    return fighter1.name if fighter1.health > 0 else fighter2.name
+
+declare_winner(Fighter("Lew", 10, 2),Fighter("Harry", 5, 4), "Lew")
+# , "Lew")

@@ -666,3 +666,4 @@ def wave(people):
         if people[i] != ' ':
             my_wave += [people[:i] + people[i].upper() + people[i+1:]]
     return my_wave
+
