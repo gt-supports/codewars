@@ -167,3 +167,17 @@ function count(string) {
     }
     return map;
 }
+
+// 15 https://www.codewars.com/kata/550554fd08b86f84fe000a58/train/python
+
+function inArray(array1, array2) {
+    const finalArr = []
+    for (const value1 of array1) {
+        for (const value2 of array2) {
+            if (value2.includes(value1)) {
+                finalArr.push(value1)
+            }
+        }
+    }
+    return [...new Set(finalArr.sort())]
+}

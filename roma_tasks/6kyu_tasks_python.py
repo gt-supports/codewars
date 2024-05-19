@@ -328,3 +328,15 @@ def count(s):
     for i in s:
         char_map[i] = s.count(i)
     return char_map
+
+
+# https://www.codewars.com/kata/550554fd08b86f84fe000a58/train/python
+
+def in_array(array1, array2):
+    final_set = set()
+    for i in array1:
+        for j in array2:
+            if i in j:
+                final_set.add(i)
+                break
+    return sorted(list(final_set))
