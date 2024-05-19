@@ -338,6 +338,37 @@ def cakes(recipe, available):
     return min(num)
 
 # must return 2
-cakes({'flour': 500, 'sugar': 200, 'eggs': 1}, {'flour': 1200, 'sugar': 1200, 'eggs': 5, 'milk': 200})
+# cakes({'flour': 500, 'sugar': 200, 'eggs': 1}, {'flour': 1200, 'sugar': 1200, 'eggs': 5, 'milk': 200})
 # must return 0
-cakes({'apples': 3, 'flour': 300, 'sugar': 150, 'milk': 100, 'oil': 100}, {'sugar': 500, 'flour': 2000, 'milk': 2000})
+# cakes({'apples': 3, 'flour': 300, 'sugar': 150, 'milk': 100, 'oil': 100}, {'sugar': 500, 'flour': 2000, 'milk': 2000})
+
+# https://www.codewars.com/kata/52bc74d4ac05d0945d00054e/train/python
+def first_non_repeating_letter(s):
+    un = [x for x in s if s.lower().count(x.lower()) == 1]
+    return un[0] if len(un)>0 else ''
+
+
+
+# first_non_repeating_letter('at')
+# , 'a')
+# first_non_repeating_letter('1<Tre1s<s')
+# , 't')
+# first_non_repeating_letter('moonmen')
+# , 'e')
+
+
+# https://www.codewars.com/kata/55c6126177c9441a570000cc/train/python
+def order_weight(strng):
+    arr = [sum(int(y) for y in x) for x in strng.split()]
+    print(sorted(strng.split()))
+    print(' '.join(sorted(sorted(strng.split(' ')), key=lambda x: sum(int(y) for y in x))))
+    print(' '.join((sorted(strng.split(' '), key=lambda x: sum(int(y) for y in x)))))
+    return ' '.join(x[1] for x in sorted(zip(arr, strng.split())))
+
+
+order_weight("103 123 4444 99 2000")
+# , "2000 103 123 4444 99")
+# order_weight("2000 10003 1234000 44444444 9999 11 11 22 123")
+                       # "11 11 2000 10003 22 123 1234000 44444444 9999")
+# order_weight("")
+# "")

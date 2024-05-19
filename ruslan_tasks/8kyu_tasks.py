@@ -314,6 +314,6 @@ def triple_trouble(one, two, three):
     print(''.join(''.join(a) for a in zip(one, two, three)))
     return ''.join(one[i]+two[i]+three[i] for i in range(len(one)))
 
-triple_trouble("aaa","bbb","ccc")
+# triple_trouble("aaa","bbb","ccc")
 
 
