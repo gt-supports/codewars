@@ -214,3 +214,36 @@ def min_value(digits):
 
 def flatten_and_sort(array):
     return sorted([element for row in array for element in row])
+
+
+# https://www.codewars.com/kata/55f2b110f61eb01779000053/train/python
+
+def get_sum(a, b):
+    if a == b:
+        return a
+    elif a < b:
+        return sum(range(a, b + 1))
+    else:
+        return sum(range(b, a + 1))
+
+
+# https://www.codewars.com/kata/5412509bd436bd33920011bc/train/python
+
+def maskify(cc):
+    if len(cc) > 4:
+        return "#" * (len(cc) - 4) + cc[-4:]
+    else:
+        return cc
+
+
+# https://www.codewars.com/kata/551f37452ff852b7bd000139/train/python
+
+def add_binary(a, b):
+    sum_bin = bin(a + b)
+    return ''.join(i for i in sum_bin if i.isdigit())[1::]
+
+
+# https://www.codewars.com/kata/586f6741c66d18c22800010a/train/python
+
+def sequence_sum(begin_number, end_number, step):
+    return sum(range(begin_number, end_number + 1, step))
