@@ -263,3 +263,36 @@ def declare_winner(fighter1, fighter2, first_attacker):
 
 declare_winner(Fighter("Lew", 10, 2),Fighter("Harry", 5, 4), "Lew")
 # , "Lew")
+
+
+# https://www.codewars.com/kata/51675d17e0c1bed195000001/train/python
+def solution_d(digits):
+    print(digits[:len(digits)-4])
+    # print(max(int(x) for i, x in enumerate(digits[:len(digits)])))
+    t = 0
+    for i, x in enumerate(digits[:len(digits)-4]):
+        if int(digits[i:i+5]) > t:
+            t = int(digits[i:i+5])
+    return t
+
+
+
+# solution_d('123456777')
+# solution_d('1283214321328871321312312321123123445547879884')
+
+# https://www.codewars.com/kata/539de388a540db7fec000642
+from dateutil import parser
+def check_coupon(entered_code, correct_code, current_date, expiration_date):
+    print(entered_code == correct_code and parser.parse(current_date) <= parser.parse(expiration_date))
+    return entered_code == correct_code!=False and parser.parse(current_date) <= parser.parse(expiration_date)
+
+
+
+check_coupon('123','123','September 5, 2014','October 1, 2014')
+# , True);
+check_coupon("123", "123", "July 9, 2015", "July 2, 2015")
+# == False
+check_coupon('123a','123','September 5, 2014','October 1, 2014')
+# , False);
+
+check_coupon(0, False, 'September 5, 2014', 'September 25, 2014')

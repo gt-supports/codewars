@@ -626,29 +626,20 @@ def name_in_str(strng : str, name : str) -> bool:
     count_letters_strn = [strng.lower().count(x) for x in set(letters)]
     check_amount = [1 if count_letters_set[i]<=count_letters_strn[i] else 0 for i, x in enumerate(count_letters_set)]
     if sum(check_amount) != len(check_amount):
-        print("2 False")
         return False
 
-    id_strng =[id for id, x in enumerate(strng.lower()) if x in letters]
-    print([x for x in id_strng if strng.lower()[id] ])
-
-    for i, x in enumerate(strng.lower()):
-        if x in letters and
 
 
     order_lst = [ x for x in strng.lower()  if x in letters]
     check_order = [1 if letters[i] == order_lst[i] else 0 for i, x in enumerate(letters) ]
-    print(order_lst)
     if sum(check_order) != len(check_order):
-        print("3 False")
         return False
-    print(True)
     return True
 
 
 
 
-name_in_str("Across the rivers", "chris")  #True)
+# name_in_str("Across the rivers", "chris")  #True)
 # name_in_str("Next to a lake", "chris") # False)
 # name_in_str("Under a sea", "chris") # False)
 # name_in_str("A crew that boards the ship", "chris") # False)
@@ -667,3 +658,9 @@ def wave(people):
             my_wave += [people[:i] + people[i].upper() + people[i+1:]]
     return my_wave
 
+# https://www.codewars.com/kata/587731fda577b3d1b0001196
+
+def camel_case(s):
+    return ''.join(s.title().split())
+
+camel_case('hello world')
