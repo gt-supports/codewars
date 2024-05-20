@@ -181,3 +181,27 @@ function inArray(array1, array2) {
     }
     return [...new Set(finalArr.sort())]
 }
+
+//16 https://www.codewars.com/kata/5277c8a221e209d3f6000b56/train/python
+function validBraces(braces) {
+    const stack = [];
+
+    const pairs = {
+        '(': ')',
+        '{': '}',
+        '[': ']',
+    }
+
+    for (const brace of braces) {
+        if (pairs[brace]) {
+            stack.push(brace);
+        } else {
+            let last = stack.pop();
+            if (brace !== pairs[last]) {
+                return false;
+            }
+        }
+    }
+
+    return stack.length === 0;
+}
