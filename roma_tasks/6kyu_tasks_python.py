@@ -340,3 +340,27 @@ def in_array(array1, array2):
                 final_set.add(i)
                 break
     return sorted(list(final_set))
+
+
+# https://www.codewars.com/kata/5277c8a221e209d3f6000b56/train/python
+
+def valid_braces(string):
+    stack = []
+
+    pairs = {
+        '(': ')',
+        '{': '}',
+        '[': ']'
+    }
+
+    for brace in string:
+        if brace in pairs:
+            stack.append(brace)
+        else:
+            if not stack:
+                return False
+            last = stack.pop()
+            if pairs[last] != brace:
+                return False
+
+    return len(stack) == 0
