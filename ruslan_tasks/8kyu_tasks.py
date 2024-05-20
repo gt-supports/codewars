@@ -317,3 +317,11 @@ def triple_trouble(one, two, three):
 # triple_trouble("aaa","bbb","ccc")
 
 
+# https://www.codewars.com/kata/557b5e0bddf29d861400005d
+
+def converter(mpg):
+    return round(mpg * 1.609344/4.54609188, 2)
+
+# https://www.codewars.com/kata/570e8ec4127ad143660001fd/train/python
+def billboard(name, price=30):
+    return sum(len(name) for x in range(price))
