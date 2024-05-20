@@ -247,3 +247,12 @@ def add_binary(a, b):
 
 def sequence_sum(begin_number, end_number, step):
     return sum(range(begin_number, end_number + 1, step))
+
+# https://www.codewars.com/kata/53dbd5315a3c69eed20002dd/train/python
+
+def filter_list(l):
+    result = []
+    for i in l:
+        if isinstance(i, int):
+            result.append(i)
+    return result
