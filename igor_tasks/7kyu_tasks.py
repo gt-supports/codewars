@@ -248,6 +248,7 @@ def add_binary(a, b):
 def sequence_sum(begin_number, end_number, step):
     return sum(range(begin_number, end_number + 1, step))
 
+
 # https://www.codewars.com/kata/53dbd5315a3c69eed20002dd/train/python
 
 def filter_list(l):
@@ -256,3 +257,15 @@ def filter_list(l):
         if isinstance(i, int):
             result.append(i)
     return result
+
+
+# https://www.codewars.com/kata/5417423f9e2e6c2f040002ae/train/python
+
+def digitize(n):
+    return [int(i) for i in str(n)]
+
+
+# https://www.codewars.com/kata/588a3c3ef0fbc9c8e1000095/train/python
+
+def max_diff(lst):
+    return sorted(lst, reverse=True)[0] - sorted(lst)[0] if len(lst) > 1 else 0
