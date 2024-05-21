@@ -205,3 +205,18 @@ function validBraces(braces) {
 
     return stack.length === 0;
 }
+
+//17 https://www.codewars.com/kata/58f5c63f1e26ecda7e000029/train/javascript
+
+function wave(str) {
+    const finalArr = [];
+    for (let index = 0; index < str.length; index++) {
+        if (str[index] !== ' ') {
+            const wavedStr = str.split('').map((item, i) => {
+                return i === index ? item.toUpperCase() : item;
+            }).join('');
+            finalArr.push(wavedStr);
+        }
+    }
+    return finalArr;
+}
