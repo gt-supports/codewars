@@ -663,4 +663,27 @@ def wave(people):
 def camel_case(s):
     return ''.join(s.title().split())
 
-camel_case('hello world')
+# camel_case('hello world')
+
+# https://www.codewars.com/kata/52b757663a95b11b3d00062d
+
+def to_weird_case(words):
+    arr_f = []
+    for w in words.split():
+        arr_w = []
+        for i, letter in enumerate(w):
+            if i%2:
+                arr_w += letter.lower()
+            else:
+                arr_w += letter.upper()
+        arr_f.append(''.join(arr_w))
+    return ' '.join(arr_f)
+# def word_test(words):
+    # ''.join(letter.lower() if i%2 else letter for i, letter in enumerate(word.upper())
+# def to_weird_case_2(words):
+    # ' '.join(word_test(x) for x in words.split)
+
+    # print(' '.join(''.join(letter.lower() if w[i]%2 else letter.upper() for i, letter in enumerate(w)) for w in words.split()))
+
+
+to_weird_case("Weird string case")
