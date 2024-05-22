@@ -360,9 +360,9 @@ def first_non_repeating_letter(s):
 # https://www.codewars.com/kata/55c6126177c9441a570000cc/train/python
 def order_weight(strng):
     arr = [sum(int(y) for y in x) for x in strng.split()]
-    print(sorted(strng.split()))
-    print(' '.join(sorted(sorted(strng.split(' ')), key=lambda x: sum(int(y) for y in x))))
-    print(' '.join((sorted(strng.split(' '), key=lambda x: sum(int(y) for y in x)))))
+    # print(sorted(strng.split()))
+    # print(' '.join(sorted(sorted(strng.split(' ')), key=lambda x: sum(int(y) for y in x))))
+    # print(' '.join((sorted(strng.split(' '), key=lambda x: sum(int(y) for y in x)))))
     return ' '.join(x[1] for x in sorted(zip(arr, strng.split())))
 
 
@@ -372,3 +372,22 @@ order_weight("103 123 4444 99 2000")
                        # "11 11 2000 10003 22 123 1234000 44444444 9999")
 # order_weight("")
 # "")
+
+# https://www.codewars.com/kata/54a91a4883a7de5d7800009c/train/python
+
+import re
+def increment_string(strng):
+    check = re.search(r"(\d+)$", strng)
+    print(check)
+    if check:
+        num = check.group(1)
+        print(len(num))
+        incr_str = f"{'0'*(len(num)-len(str(int(num)+1)))}{int(num)+1}"
+        return strng[:check.start()] + incr_str
+    return strng + '1'
+
+
+    return strng
+
+increment_string("foobar001")
+increment_string("foobar")
