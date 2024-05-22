@@ -286,3 +286,15 @@ def printer_error(s):
 def binary_array_to_number(arr):
     string_number = ''.join([str(num) for num in arr])
     return int(string_number, 2)
+
+
+# https://www.codewars.com/kata/53d2697b7152a5e13d000b82/train/python
+
+def copy_list(l):
+    return l.copy()
+
+
+# https://www.codewars.com/kata/57a04da9e298a7ee43000111/train/python
+
+def reverse_list(lst):
+    return lst[::-1]
