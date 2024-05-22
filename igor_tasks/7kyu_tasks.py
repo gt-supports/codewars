@@ -269,3 +269,20 @@ def digitize(n):
 
 def max_diff(lst):
     return sorted(lst, reverse=True)[0] - sorted(lst)[0] if len(lst) > 1 else 0
+
+
+# https://www.codewars.com/kata/56541980fa08ab47a0000040/train/python
+
+def printer_error(s):
+    count = 0
+    for char in s:
+        if ord(char) > ord('m'):
+            count += 1
+    return f"{count}/{len(s)}"
+
+
+# https://www.codewars.com/kata/578553c3a1b8d5c40300037c/train/python
+
+def binary_array_to_number(arr):
+    string_number = ''.join([str(num) for num in arr])
+    return int(string_number, 2)
