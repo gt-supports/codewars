@@ -220,3 +220,16 @@ function wave(str) {
     }
     return finalArr;
 }
+
+//18 https://www.codewars.com/kata/57b06f90e298a7b53d000a86/
+
+function queueTime(customers, n) {
+    const tills = Array(n).fill(0);
+
+    for (let time of customers) {
+        const leastBusyTill = tills.indexOf(Math.min(...tills));
+        tills[leastBusyTill] += time
+    }
+
+    return Math.max(...tills)
+}
