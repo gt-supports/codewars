@@ -298,3 +298,9 @@ def copy_list(l):
 
 def reverse_list(lst):
     return lst[::-1]
+
+
+# https://www.codewars.com/kata/586ec0b8d098206cce001141/train/python
+
+def inverse_slice(items, a, b):
+    return items[:a] + items[b:]
