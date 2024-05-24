@@ -377,13 +377,21 @@ order_weight("103 123 4444 99 2000")
 
 import re
 def increment_string(strng):
+    head = strng.rstrip('0123456789')
+    print(head)
+    tail = strng[len(head):]
+    print(tail)
+
     check = re.search(r"(\d+)$", strng)
-    print(check)
     if check:
         num = check.group(1)
-        print(len(num))
         incr_str = f"{'0'*(len(num)-len(str(int(num)+1)))}{int(num)+1}"
+        incr_str_2 = str(int(num)+1).zfill(len(num))
+        print(incr_str_2)
+        print(strng[:check.start()] + incr_str_2)
         return strng[:check.start()] + incr_str
+
+
     return strng + '1'
 
 
@@ -391,3 +399,40 @@ def increment_string(strng):
 
 increment_string("foobar001")
 increment_string("foobar")
+
+# https://www.codewars.com/kata/55c04b4cc56a697bb0000048
+
+def scramble(s1, s2):
+    print(s2.count("w"))
+    # print([s2.count(s2, x) for x in set(s2)])
+    return
+
+
+scramble('rkqodlw', 'wworld')
+scramble('rkqodlw', 'world')
+# ==> True
+scramble('cedewaraaossoqqyt', 'codewars')
+# ==> True
+scramble('katas', 'steak')
+# ==> False
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

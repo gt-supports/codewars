@@ -283,7 +283,7 @@ def solution_d(digits):
 # https://www.codewars.com/kata/539de388a540db7fec000642
 from dateutil import parser
 def check_coupon(entered_code, correct_code, current_date, expiration_date):
-    print(entered_code == correct_code and parser.parse(current_date) <= parser.parse(expiration_date))
+    # print(entered_code == correct_code and parser.parse(current_date) <= parser.parse(expiration_date))
     return entered_code == correct_code!=False and parser.parse(current_date) <= parser.parse(expiration_date)
 
 
@@ -296,3 +296,31 @@ check_coupon('123a','123','September 5, 2014','October 1, 2014')
 # , False);
 
 check_coupon(0, False, 'September 5, 2014', 'September 25, 2014')
+
+# https://www.codewars.com/kata/664b9dd610985cc3b6784111/train/python
+
+def all_nines(x):
+    return 0
+
+# https://www.codewars.com/kata/57a06b07cf1fa58b2b000252/train/python
+def is_it_letter(s):
+    return s.isalpha()
+
+# https://www.codewars.com/kata/5436f26c4e3d6c40e5000282/train/python
+def sum_of_n(n):
+    # print( [sum(range(x+1)) for x in range(n+1)])
+    # print(range(-n))
+    # print([sum(range(x+1))*(-1 if n<0 else 1) for x in range(abs(n)+1)])
+
+    # print([sum(range(x for x in range(n+1)] if n>=0 else [sum(range(x+1)) for x in range(abs(n)+1)]*(-1))
+    return []
+
+# sum_of_n(3)
+sum_of_n(-3)
+
+
+# https://www.codewars.com/kata/57a049e253ba33ac5e000212/train/python
+def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n-1)
