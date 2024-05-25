@@ -304,3 +304,13 @@ def reverse_list(lst):
 
 def inverse_slice(items, a, b):
     return items[:a] + items[b:]
+
+
+# https://www.codewars.com/kata/57d86d3d3c3f961278000005/train/python
+
+def last(lst):
+    if isinstance(lst, list) and len(lst) > 0:
+        return lst[-1]
+    else:
+        return None
+   
