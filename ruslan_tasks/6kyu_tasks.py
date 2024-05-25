@@ -705,4 +705,18 @@ def diamond(n):
         row += 1
     return str
 
-diamond(9)
+# diamond(9)
+
+
+# https://www.codewars.com/kata/55466989aeecab5aac00003e/train/python
+def sq_in_rect(lng, wdth):
+    if lng != wdth:
+        arr = []
+        while min(lng, wdth) > 0:
+            arr.append(min(lng, wdth))
+            lng, wdth = max(lng, wdth) - min(lng, wdth), min(lng, wdth)
+        return arr
+    return None
+
+sq_in_rect(5, 3)
+# [3, 2, 1, 1]
