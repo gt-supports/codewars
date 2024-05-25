@@ -696,13 +696,13 @@ def diamond(n):
     row = 0
     while n > 0:
         if row+1 < n:
-            str += " "*((n-1)//2) + "*"*(1+2*row) + "\n"
+            str += " "*((n-1-row)//2) + "*"*(1+2*row) + "\n"
         elif row+1 == n:
             str += "*" * (1 + 2 * row) + "\n"
         if row+1 > n:
-            str += " "*(row//2) + "*"*(1+2*(n-1)) + "\n"
+            str += " "*((row+1-n)//2) + "*"*(1+2*(n-1)) + "\n"
         n -= 1
         row += 1
     return str
 
-diamond(5)
+diamond(9)
