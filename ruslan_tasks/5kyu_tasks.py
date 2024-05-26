@@ -483,11 +483,46 @@ def zeros(n):
     #     i += 1
     # return i
 
-zeros(30)
+# zeros(30)
 # 5 10 15 20 25 30
 
+# https://www.codewars.com/kata/5270d0d18625160ada0000e4/train/python
+from collections import Counter
+def score(dice):
+    counter = Counter(dice)
+    points = 0
+    d = {
+         1: 1000,
+         2: 200,
+         3: 300,
+         4: 400,
+         5: 500,
+         6: 600
+    }
+    d_2 = {
+         1: 100,
+         5: 50
+    }
+    for num, count in counter.items():
+        if count//3:
+            points += d.get(num)
+        points += d_2.get(num, 0)*(count%3)
+    return points
 
 
+
+
+
+score( [5, 1, 3, 4, 1] )
+# ,  250)
+# score( [1, 1, 1, 3, 1] )
+# , 1100)
+# score( [2, 3, 4, 6, 2] )
+# ,    0)
+# score( [4, 4, 4, 3, 3] )
+# ,  400)
+# score( [2, 4, 4, 5, 4] )
+# ,  450)
 
 
 
