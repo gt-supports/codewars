@@ -313,4 +313,15 @@ def last(lst):
         return lst[-1]
     else:
         return None
-   
+
+
+# https://www.codewars.com/kata/57ae18c6e298a7a6d5000c7a/train/python
+
+def replace_all(obj, find, replace):
+    return [elem if elem != find else replace for elem in obj] if isinstance(obj, list) else obj.replace(find, replace)
+
+
+# https://www.codewars.com/kata/56b1eb19247c01493a000065/train/python
+
+def unique_sum(lst):
+    return sum(set(lst)) if len(lst) > 0 else None
