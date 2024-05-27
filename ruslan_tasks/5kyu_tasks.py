@@ -397,33 +397,132 @@ def increment_string(strng):
 
     return strng
 
-increment_string("foobar001")
-increment_string("foobar")
+# increment_string("foobar001")
+# increment_string("foobar")
 
 # https://www.codewars.com/kata/55c04b4cc56a697bb0000048
-
+from collections import Counter
 def scramble(s1, s2):
-    print(s2.count("w"))
+    count1 = Counter(s1)
+    count2 = Counter(s2)
+    print(count1-count2)
+    print(count1)
+    print(count2)
+    for char, count in count2.items():
+        if count1[char] < count:
+            return False
+    return True
+
+    # print(count1)
+    # print(s2.count("w"))
+    # print(sum(s2.count(x) <= s1.count(x) for x in list(s2)) == len(s2))
+    # print(sum(1 if x in s1 else 0 for x in list(s2)) == len(s2))
+
+
+    # не проходит тест на performance (но прошел все базовые тесты) Execution Timed Out (12000 ms)
+    # for x in s2:
+    #     if x in s1:
+    #         s1 = s1.replace(x, "", 1)
+    #     else:
+    #         return False
+    # return True
+
+
+ # не проходит тест на performance
+#     arr = list(s1)
+#     try:
+#         for x in s2:
+#             arr.pop(arr.index(x))
+#     except:
+#         return False
+#     return True
+
+ # не проходит тест на performance
+    # return sum(s2.count(x) <= s1.count(x) for x in list(s2)) == len(s2)
+
     # print([s2.count(s2, x) for x in set(s2)])
-    return
 
 
-scramble('rkqodlw', 'wworld')
-scramble('rkqodlw', 'world')
+
+# scramble('rkqodlwww', 'wworld')
+# False
+# scramble('rkqodlw', 'world')
 # ==> True
-scramble('cedewaraaossoqqyt', 'codewars')
+# scramble('cedewaraaossoqqyt', 'codewars')
 # ==> True
-scramble('katas', 'steak')
+# scramble('katas', 'steak')
 # ==> False
 
 
+# https://www.codewars.com/kata/52f787eb172a8b4ae1000a34/train/python
+import re
+def factorial_1(n):
+    if n == 0:
+        return 1
+    return n * factorial_1(n-1)
+
+def zeros(n):
+    i = 1
+    zero_count = 0
+    while n > 5**i:
+        zero_count += n // 5**i
+        i += 1
+    return zero_count
+
+
+    # x = str(factorial_1(n))
+    # match = re.search(r'0+$', x)
+    # if match:
+    #     return len(match.group(0))
+    # else:
+    #     return 0
+
+    # i = 0
+    # while x % 10 == 0:
+    #     x //= 10
+    #     i += 1
+    # return i
+
+# zeros(30)
+# 5 10 15 20 25 30
+
+# https://www.codewars.com/kata/5270d0d18625160ada0000e4/train/python
+from collections import Counter
+def score(dice):
+    counter = Counter(dice)
+    points = 0
+    d = {
+         1: 1000,
+         2: 200,
+         3: 300,
+         4: 400,
+         5: 500,
+         6: 600
+    }
+    d_2 = {
+         1: 100,
+         5: 50
+    }
+    for num, count in counter.items():
+        if count//3:
+            points += d.get(num)
+        points += d_2.get(num, 0)*(count%3)
+    return points
 
 
 
 
 
-
-
+score( [5, 1, 3, 4, 1] )
+# ,  250)
+# score( [1, 1, 1, 3, 1] )
+# , 1100)
+# score( [2, 3, 4, 6, 2] )
+# ,    0)
+# score( [4, 4, 4, 3, 3] )
+# ,  400)
+# score( [2, 4, 4, 5, 4] )
+# ,  450)
 
 
 

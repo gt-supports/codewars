@@ -696,13 +696,51 @@ def diamond(n):
     row = 0
     while n > 0:
         if row+1 < n:
-            str += " "*((n-1)//2) + "*"*(1+2*row) + "\n"
+            str += " "*((n-1-row)//2) + "*"*(1+2*row) + "\n"
         elif row+1 == n:
             str += "*" * (1 + 2 * row) + "\n"
         if row+1 > n:
-            str += " "*(row//2) + "*"*(1+2*(n-1)) + "\n"
+            str += " "*((row+1-n)//2) + "*"*(1+2*(n-1)) + "\n"
         n -= 1
         row += 1
     return str
 
-diamond(5)
+# diamond(9)
+
+
+# https://www.codewars.com/kata/55466989aeecab5aac00003e/train/python
+def sq_in_rect(lng, wdth):
+    if lng != wdth:
+        arr = []
+        while min(lng, wdth) > 0:
+            arr.append(min(lng, wdth))
+            lng, wdth = max(lng, wdth) - min(lng, wdth), min(lng, wdth)
+        return arr
+    return None
+
+sq_in_rect(5, 3)
+# [3, 2, 1, 1]
+
+# https://www.codewars.com/kata/515decfd9dcfc23bb6000006
+import re
+def is_valid_IP(strng):
+    pattern = re.compile(r"^\d+$")
+    if all(bool(pattern.match(x)) for x in strng.split('.')) == False:
+        return False
+    if strng == '' or len(strng.split('.')) != 4 or any(x.isalpha() for x in strng.split(".")):
+        return False
+    if re.search(" ", strng):
+        return False
+    if any(int(x) < 100 and len(x) > 2 for x in strng.split('.')):
+        return False
+    if any(int(x) < 10 and len(x) > 1 for x in strng.split('.')):
+        return False
+    return all(0 <= int(x) <= 255 for x in strng.split('.'))
+
+
+is_valid_IP('12.255.56.1')
+# , True)
+is_valid_IP('')
+# , False)
+is_valid_IP('abc.def.ghi.jkl')
+# , False)
