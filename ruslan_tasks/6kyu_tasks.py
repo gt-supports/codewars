@@ -720,3 +720,27 @@ def sq_in_rect(lng, wdth):
 
 sq_in_rect(5, 3)
 # [3, 2, 1, 1]
+
+# https://www.codewars.com/kata/515decfd9dcfc23bb6000006
+import re
+def is_valid_IP(strng):
+    pattern = re.compile(r"^\d+$")
+    if all(bool(pattern.match(x)) for x in strng.split('.')) == False:
+        return False
+    if strng == '' or len(strng.split('.')) != 4 or any(x.isalpha() for x in strng.split(".")):
+        return False
+    if re.search(" ", strng):
+        return False
+    if any(int(x) < 100 and len(x) > 2 for x in strng.split('.')):
+        return False
+    if any(int(x) < 10 and len(x) > 1 for x in strng.split('.')):
+        return False
+    return all(0 <= int(x) <= 255 for x in strng.split('.'))
+
+
+is_valid_IP('12.255.56.1')
+# , True)
+is_valid_IP('')
+# , False)
+is_valid_IP('abc.def.ghi.jkl')
+# , False)

@@ -1,7 +1,10 @@
+from sqlalchemy.orm import Mapped
 from .base import Base
 
 
 class Product(Base):
     __tablename__ = "products"
 
-    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str]
+    description: Mapped[str]
+    price: Mapped[int]
