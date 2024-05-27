@@ -233,3 +233,13 @@ function queueTime(customers, n) {
 
     return Math.max(...tills)
 }
+
+//19 https://www.codewars.com/kata/587731fda577b3d1b0001196/train/javascript
+
+String.prototype.camelCase = function () {
+    return this.split(' ').map(word => {
+        if (word.trim().length > 0) {
+            return word[0].toUpperCase() + word.slice(1)
+        }
+    }).join('')
+}
