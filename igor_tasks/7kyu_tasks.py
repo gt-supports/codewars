@@ -325,3 +325,15 @@ def replace_all(obj, find, replace):
 
 def unique_sum(lst):
     return sum(set(lst)) if len(lst) > 0 else None
+
+
+# https://www.codewars.com/kata/54162d1333c02486a700011d/train/python
+
+def penultimate(a):
+    return a[-2]
+
+
+# https://www.codewars.com/kata/59557b2a6e595316ab000046/train/python
+
+def convert_hash_to_array(dct):
+    return [[k, v] for k, v in dct.items()]
