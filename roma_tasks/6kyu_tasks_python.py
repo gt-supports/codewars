@@ -369,3 +369,8 @@ def valid_braces(string):
 # https://www.codewars.com/kata/587731fda577b3d1b0001196/train/python
 def camel_case(s):
     return ''.join(word.capitalize() for word in s.split())
+
+
+# https://www.codewars.com/kata/534d2f5b5371ecf8d2000a08/solutions/python
+def multiplicationTable(size):
+    return [[j * i for j in range(1, size + 1)] for i in range(1, size + 1)]
