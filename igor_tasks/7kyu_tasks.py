@@ -337,3 +337,21 @@ def penultimate(a):
 
 def convert_hash_to_array(dct):
     return [[k, v] for k, v in dct.items()]
+
+
+# https://www.codewars.com/kata/54466996990c921f90000d61/train/python
+
+def is_monotone(heights):
+    for i in range(len(heights) - 1):
+        if heights[i] > heights[i + 1]:
+            return False
+    return True
+
+
+# https://www.codewars.com/kata/580a4001d6df740d61000301/train/python
+
+def complete_series(seq):
+    highest = max(seq)
+    if len(seq) != len(set(seq)):
+        return [0]
+    return list(range(highest + 1))
