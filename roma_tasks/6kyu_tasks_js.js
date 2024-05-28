@@ -243,3 +243,17 @@ String.prototype.camelCase = function () {
         }
     }).join('')
 }
+
+//20 https://www.codewars.com/kata/534d2f5b5371ecf8d2000a08/solutions/javascript
+
+const multiplicationTable = (size) => {
+    const mainArr = [];
+    for (let i = 1; i <= size; i++) {
+        const row = [];
+        for (let j = 1; j <= size; j++) {
+            row.push(i * j);
+        }
+        mainArr.push(row);
+    }
+    return mainArr;
+}
