@@ -744,3 +744,22 @@ is_valid_IP('')
 # , False)
 is_valid_IP('abc.def.ghi.jkl')
 # , False)
+
+
+# https://www.codewars.com/kata/5202ef17a402dd033c000009/train/python
+
+def title_case(title, minor_words=''):
+    print(minor_words.lower())
+    print([x.lower() for x in title.split() if x.lower() in minor_words.lower()])
+    return ' '.join(x.title() if x.lower() not in minor_words.lower() or i == 0 else x.lower() for i, x in enumerate(title.split()))
+    pass
+
+
+title_case('')
+# , '')
+title_case('a clash of KINGS', 'a an the of')
+# , 'A Clash of Kings')
+title_case('THE WIND IN THE WILLOWS', 'The In')
+# , 'The Wind in the Willows')
+title_case('the quick brown fox')
+# , 'The Quick Brown Fox')
