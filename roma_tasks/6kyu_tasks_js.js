@@ -257,3 +257,19 @@ const multiplicationTable = (size) => {
     }
     return mainArr;
 }
+
+//21 https://www.codewars.com/kata/569d488d61b812a0f7000015/train/javascript
+
+function dataReverse(data) {
+    const finalArr = [];
+    let arr = [];
+
+    for (let i = 0; i < data.length; i++) {
+        arr.push(data[i]);
+        if ((i + 1) % 8 === 0) {
+            finalArr.push(arr);
+            arr = [];
+        }
+    }
+    return finalArr.reverse().flat()
+}
