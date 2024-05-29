@@ -355,3 +355,13 @@ def complete_series(seq):
     if len(seq) != len(set(seq)):
         return [0]
     return list(range(highest + 1))
+
+
+# https://www.codewars.com/kata/58e93b4706db4d24ee000096/train/python
+
+def days_represented(trips):
+    days = set()
+    for trip in trips:
+        for day in range(trip[0], trip[1] + 1):
+            days.add(day)
+    return len(days)
