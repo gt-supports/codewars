@@ -324,3 +324,21 @@ def factorial(n):
     if n == 0:
         return 1
     return n * factorial(n-1)
+
+
+# https://www.codewars.com/kata/526c7363236867513f0005ca/train/python
+
+def is_leap_year(year):
+    return year % 400 == 0 or (year % 4 == 0 and year %100 != 0)
+
+# https://www.codewars.com/kata/5b39e3772ae7545f650000fc/train/python
+def remove_duplicate_words(s):
+    arr_inx = sorted([s.split().index(x) for x in set(s.split())])
+    return " ".join([s.split()[int(x)] for x in arr_inx])
+
+
+
+remove_duplicate_words("alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta")
+# , "alpha beta gamma delta")
+remove_duplicate_words("my cat is my cat fat")
+# , "my cat is fat")
