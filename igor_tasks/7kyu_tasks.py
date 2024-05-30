@@ -365,3 +365,16 @@ def days_represented(trips):
         for day in range(trip[0], trip[1] + 1):
             days.add(day)
     return len(days)
+
+
+# https://www.codewars.com/kata/5f5802bf4c2cc4001a6f859e/train/python
+
+def grid_index(grid, indexes):
+    n = len(grid)
+    char_list = []
+    for index in indexes:
+        row = (index - 1) // n
+        col = (index - 1) % n
+        char_list.append(grid[row][col])
+
+    return ''.join(char_list)
