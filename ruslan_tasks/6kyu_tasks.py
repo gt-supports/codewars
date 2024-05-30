@@ -755,11 +755,23 @@ def title_case(title, minor_words=''):
     pass
 
 
-title_case('')
+# title_case('')
 # , '')
-title_case('a clash of KINGS', 'a an the of')
-# , 'A Clash of Kings')
-title_case('THE WIND IN THE WILLOWS', 'The In')
+# title_case('a clash of KINGS', 'a an the of')
+# , 'A Clash of Ki/ngs')
+# title_case('THE WIND IN THE WILLOWS', 'The In')
 # , 'The Wind in the Willows')
-title_case('the quick brown fox')
+# title_case('the quick brown fox')
 # , 'The Quick Brown Fox')
+
+# https://www.codewars.com/kata/534d2f5b5371ecf8d2000a08/train/python
+def multiplication_table(size):
+    arr = []
+    arr_1 = list(range(1, size+1))
+    for i in range(1, size+1):
+        arr_temp = [x*i for x in arr_1]
+        arr.append(arr_temp)
+    return arr
+
+multiplication_table(3)
+
