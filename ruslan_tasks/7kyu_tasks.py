@@ -281,21 +281,21 @@ def solution_d(digits):
 # solution_d('1283214321328871321312312321123123445547879884')
 
 # https://www.codewars.com/kata/539de388a540db7fec000642
-from dateutil import parser
+# from date import parser
 def check_coupon(entered_code, correct_code, current_date, expiration_date):
     # print(entered_code == correct_code and parser.parse(current_date) <= parser.parse(expiration_date))
     return entered_code == correct_code!=False and parser.parse(current_date) <= parser.parse(expiration_date)
 
 
 
-check_coupon('123','123','September 5, 2014','October 1, 2014')
+# check_coupon('123','123','September 5, 2014','October 1, 2014')
 # , True);
-check_coupon("123", "123", "July 9, 2015", "July 2, 2015")
+# check_coupon("123", "123", "July 9, 2015", "July 2, 2015")
 # == False
-check_coupon('123a','123','September 5, 2014','October 1, 2014')
+# check_coupon('123a','123','September 5, 2014','October 1, 2014')
 # , False);
 
-check_coupon(0, False, 'September 5, 2014', 'September 25, 2014')
+# check_coupon(0, False, 'September 5, 2014', 'September 25, 2014')
 
 # https://www.codewars.com/kata/664b9dd610985cc3b6784111/train/python
 
@@ -325,6 +325,8 @@ def factorial(n):
         return 1
     return n * factorial(n-1)
 
+#
+
 
 # https://www.codewars.com/kata/526c7363236867513f0005ca/train/python
 
@@ -338,7 +340,27 @@ def remove_duplicate_words(s):
 
 
 
-remove_duplicate_words("alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta")
+# remove_duplicate_words("alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta")
 # , "alpha beta gamma delta")
-remove_duplicate_words("my cat is my cat fat")
+# remove_duplicate_words("my cat is my cat fat")
 # , "my cat is fat")
+
+
+ # https://www.codewars.com/kata/5663f5305102699bad000056/train/python
+def mxdiflg(a1, a2):
+    if a1==[] or a2==[]:
+        return -1
+    arr_1 = [len(x) for x in a1]
+    arr_2 = [len(x) for x in a2]
+    min_1 = len(a1[arr_1.index(min(arr_1))])
+    min_2 = len(a2[arr_2.index(min(arr_2))])
+    max_1 = len(a1[arr_1.index(max(arr_1))])
+    max_2 = len(a2[arr_2.index(max(arr_2))])
+    return max(abs(min_1 - max_2), abs(min_2 - max_1))
+
+
+
+a1 = ["hoqq", "bbllkw", "oox", "ejjuyyy", "plmiis", "xxxzgpsssa", "xxwwkktt", "znnnnfqknaz", "qqquuhii", "dvvvwz"]
+a2 = ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"]
+
+mxdiflg(a1, a2)
