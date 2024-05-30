@@ -49,3 +49,25 @@ def is_even(n):
         return True
     else:
         return False
+
+
+# https://www.codewars.com/kata/5715eaedb436cf5606000381/train/python
+
+def positive_sum(arr):
+    arr2 = []
+    for i in arr:
+        if i > 0:
+            arr2.append(i)
+    return sum(arr2)
+
+
+# https://www.codewars.com/kata/53369039d7ab3ac506000467/train/python
+
+def bool_to_word(boolean):
+    return "Yes" if boolean else "No"
+
+
+# https://www.codewars.com/kata/515e271a311df0350d00000f/train/python
+
+def square_sum(numbers):
+    return sum(x ** 2 for x in numbers)
