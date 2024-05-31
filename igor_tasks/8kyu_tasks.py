@@ -71,3 +71,16 @@ def bool_to_word(boolean):
 
 def square_sum(numbers):
     return sum(x ** 2 for x in numbers)
+
+
+# https://www.codewars.com/kata/55d24f55d7dd296eb9000030/train/python
+
+def summation(num):
+    return sum(range(num + 1))
+
+
+# https://www.codewars.com/kata/57eadb7ecd143f4c9c0000a3/train/python
+
+def abbrev_name(name):
+    first, last = name.upper().split()
+    return f"{first[0]}.{last[0]}"
