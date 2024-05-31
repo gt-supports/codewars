@@ -325,3 +325,9 @@ def converter(mpg):
 # https://www.codewars.com/kata/570e8ec4127ad143660001fd/train/python
 def billboard(name, price=30):
     return sum(len(name) for x in range(price))
+
+
+# https://www.codewars.com/kata/54598d1fcbae2ae05200112c
+def _all(seq, fun):
+    # all(map(fun,seq))
+    return all([fun(x) for x in seq])

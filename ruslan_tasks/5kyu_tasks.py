@@ -513,7 +513,7 @@ def score(dice):
 
 
 
-score( [5, 1, 3, 4, 1] )
+# score( [5, 1, 3, 4, 1] )
 # ,  250)
 # score( [1, 1, 1, 3, 1] )
 # , 1100)
@@ -524,7 +524,18 @@ score( [5, 1, 3, 4, 1] )
 # score( [2, 4, 4, 5, 4] )
 # ,  450)
 
+# https://www.codewars.com/kata/559a28007caad2ac4e000083/train/python
+def perimeter(n):
+    fib_1 = fib_2 = 1
+    per = 1
+    while n > 0:
+        fib_1, fib_2, n = fib_2, fib_1+fib_2, n-1
+        per += fib_1
+    return 4*per
 
+
+perimeter(5)
+# 80
 
 
 
