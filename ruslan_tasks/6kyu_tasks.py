@@ -775,3 +775,26 @@ def multiplication_table(size):
 
 multiplication_table(3)
 
+# https://www.codewars.com/kata/51e0007c1f9378fa810002a9
+def parse(data):
+    print(list(data))
+    arr = []
+    y = 0
+    for x in list(data):
+        if x == 'i': y += 1
+        elif x == 'd': y -= 1
+        elif x == 's': y *= y
+        elif x == 'o': arr.append(y)
+    return arr
+
+# parse("ooo")
+# , [0, 0, 0])
+# parse("ioioio")
+# , [1, 2, 3])
+# parse("idoiido")
+# , [0, 1])
+# parse("isoisoiso")
+# , [1, 4, 25])
+# parse("codewars")
+# , [0])
+
