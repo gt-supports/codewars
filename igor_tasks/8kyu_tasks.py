@@ -84,3 +84,18 @@ def summation(num):
 def abbrev_name(name):
     first, last = name.upper().split()
     return f"{first[0]}.{last[0]}"
+
+
+# https://www.codewars.com/kata/555086d53eac039a2a000083/train/python
+
+def lovefunc(flower1, flower2):
+    return (flower1 % 2 == 0 and flower2 % 2 != 0) or (flower1 % 2 != 0 and flower2 % 2 == 0)
+
+
+# https://www.codewars.com/kata/56676e8fabd2d1ff3000000c/train/python
+
+def find_needle(haystack):
+    for i, item in enumerate(haystack):
+        if item == "needle":
+            return f"found the needle at position {i}"
+    return "needle not found"
