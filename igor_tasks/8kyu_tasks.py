@@ -99,3 +99,15 @@ def find_needle(haystack):
         if item == "needle":
             return f"found the needle at position {i}"
     return "needle not found"
+
+
+# https://www.codewars.com/kata/55f9bca8ecaa9eac7100004a/train/python
+
+def past(h, m, s):
+    return (h * 3600 * 1000) + (m * 60 * 1000) + (s * 1000)
+
+
+# https://www.codewars.com/kata/5899dc03bc95b1bf1b0000ad/train/python
+
+def invert(lst):
+    return [-x for x in lst]
