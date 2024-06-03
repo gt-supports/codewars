@@ -46,3 +46,35 @@ const data2 = [
 ];
 
 console.log(groupBy(data2, 'category'));
+
+// 3 - 50
+
+const weatherData = [
+    {date: '2024-01-01', temperature: 5, humidity: 85, precipitation: 2},
+    {date: '2024-01-02', temperature: 6, humidity: 80, precipitation: 0},
+    {date: '2024-01-03', temperature: 4, humidity: 78, precipitation: 5},
+    {date: '2024-01-04', temperature: 7, humidity: 82, precipitation: 0},
+    {date: '2024-01-05', temperature: 3, humidity: 90, precipitation: 1},
+];
+
+const getWeatherStats = (data) => {
+    const totalDays = data.length;
+    const obj = {};
+    const avgTemperature = data.reduce((acc, item) => acc + item.temperature, 0) / totalDays;
+    const avgHumidity = data.reduce((acc, item) => acc + item.humidity, 0) / totalDays;
+    const avgPrecipitation = data.reduce((acc, item) => acc + item.precipitation, 0)
+        / totalDays;
+    const maxTemperature = Math.max(...data.map(day => day.temperature));
+    const minTemperature = Math.min(...data.map(day => day.temperature));
+
+    obj['avgTemperature'] = avgTemperature;
+    obj['avgHumidity'] = avgHumidity;
+    obj['avgPrecipitation'] = avgPrecipitation;
+    obj['maxTemperature'] = maxTemperature;
+    obj['minTemperature'] = minTemperature;
+
+    return obj
+}
+
+const stats = getWeatherStats(weatherData);
+console.log(stats);
