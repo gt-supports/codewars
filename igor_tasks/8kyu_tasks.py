@@ -111,3 +111,37 @@ def past(h, m, s):
 
 def invert(lst):
     return [-x for x in lst]
+
+
+# https://www.codewars.com/kata/57a429e253ba3381850000fb/train/python
+
+def bmi(weight, height):
+    bmi_value = weight / (height ** 2)
+
+    bmi_categories = {
+        (None, 18.5): "Underweight",
+        (18.5, 25.0): "Normal",
+        (25.0, 30.0): "Overweight",
+        (30.0, None): "Obese"
+    }
+
+    for (lower, upper), category in bmi_categories.items():
+        if (lower is None or bmi_value > lower) and (upper is None or bmi_value <= upper):
+            return category
+
+    # https://www.codewars.com/kata/576bb71bbbcf0951d5000044/train/python
+
+    def count_positives_sum_negatives(arr):
+        if not arr:
+            return []
+
+        positive_count = 0
+        negative_sum = 0
+
+        for num in arr:
+            if num > 0:
+                positive_count += 1
+            elif num < 0:
+                negative_sum += num
+
+        return [positive_count, negative_sum]
