@@ -360,7 +360,34 @@ def mxdiflg(a1, a2):
 
 
 
-a1 = ["hoqq", "bbllkw", "oox", "ejjuyyy", "plmiis", "xxxzgpsssa", "xxwwkktt", "znnnnfqknaz", "qqquuhii", "dvvvwz"]
-a2 = ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"]
+# a1 = ["hoqq", "bbllkw", "oox", "ejjuyyy", "plmiis", "xxxzgpsssa", "xxwwkktt", "znnnnfqknaz", "qqquuhii", "dvvvwz"]
+# a2 = ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"]
 
-mxdiflg(a1, a2)
+# mxdiflg(a1, a2)
+
+# https://www.codewars.com/kata/514a6336889283a3d2000001
+def get_even_numbers(arr):
+    return [x for x in arr if x%2==0]
+
+# https://www.codewars.com/kata/582746fa14b3892727000c4f/train/python
+def count_developers(lst):
+    return len([i for i, x in enumerate(lst) if lst[i]['continent'] == 'Europe' and lst[i]['language'] == 'JavaScript'])
+
+
+
+lst1 = [
+  { 'firstName': 'Noah', 'lastName': 'M.', 'country': 'Switzerland', 'continent': 'Europe', 'age': 19, 'language': 'JavaScript' },
+  { 'firstName': 'Maia', 'lastName': 'S.', 'country': 'Tahiti', 'continent': 'Oceania', 'age': 28, 'language': 'JavaScript' },
+  { 'firstName': 'Shufen', 'lastName': 'L.', 'country': 'Taiwan', 'continent': 'Asia', 'age': 35, 'language': 'HTML' },
+  { 'firstName': 'Sumayah', 'lastName': 'M.', 'country': 'Tajikistan', 'continent': 'Asia', 'age': 30, 'language': 'CSS' }
+]
+
+
+# count_developers(lst1)
+
+# https://www.codewars.com/kata/59706036f6e5d1e22d000016
+def words_to_marks(s):
+    return sum(ord(x)-96 for x in list(s))
+    print(ord("a")-96)
+
+words_to_marks('attitude')

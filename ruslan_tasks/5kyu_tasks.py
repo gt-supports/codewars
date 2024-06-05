@@ -534,8 +534,35 @@ def perimeter(n):
     return 4*per
 
 
-perimeter(5)
+# perimeter(5)
 # 80
+
+# https://www.codewars.com/kata/54d512e62a5e54c96200019e/train/python
+def prime_factors(n):
+    div = 2
+    res = ''
+    while div <= n:
+        count = 0
+        while n%div ==0:
+            n = n//div
+            count +=1
+        if count > 0:
+            if count == 1:
+                res += f"({div})"
+            else:
+                res += f"({div}**{count})"
+        div += 1
+    return res
+
+
+prime_factors(7775460)
+# , "(2**2)(3**3)(5)(7)(11**2)(17)")
+prime_factors(7919)
+# , "(7919)")
+
+
+
+
 
 
 

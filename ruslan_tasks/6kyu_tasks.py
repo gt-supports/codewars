@@ -798,3 +798,24 @@ def parse(data):
 # parse("codewars")
 # , [0])
 
+# https://www.codewars.com/kata/54dc6f5a224c26032800005c/train/python
+def stock_list(list_of_art, list_of_cat):
+    if list_of_art == [] or list_of_cat == []:
+        return ''
+    arr = [(x[0], int(x.split()[1])) for x in list_of_art]
+    return ' - '.join([f'({x} : {sum(y[-1] for y in arr if y[0]==x )})' for x in list_of_cat])
+
+
+
+    pass
+
+
+b = ["BBAR 150", "CDXE 515", "BKWR 250", "BTSQ 890", "DRTY 600"]
+c = ["A", "B", "C", "D"]
+stock_list(b, c)
+# , "(A : 0) - (B : 1290) - (C : 515) - (D : 600)")
+
+a = ["ABAR 200", "CDXE 500", "BKWR 250", "BTSQ 890", "DRTY 600"]
+d = ["A", "B"]
+stock_list(a, d)
+# , "(A : 200) - (B : 1140)")
