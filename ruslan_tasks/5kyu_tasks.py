@@ -513,7 +513,7 @@ def score(dice):
 
 
 
-score( [5, 1, 3, 4, 1] )
+# score( [5, 1, 3, 4, 1] )
 # ,  250)
 # score( [1, 1, 1, 3, 1] )
 # , 1100)
@@ -523,6 +523,44 @@ score( [5, 1, 3, 4, 1] )
 # ,  400)
 # score( [2, 4, 4, 5, 4] )
 # ,  450)
+
+# https://www.codewars.com/kata/559a28007caad2ac4e000083/train/python
+def perimeter(n):
+    fib_1 = fib_2 = 1
+    per = 1
+    while n > 0:
+        fib_1, fib_2, n = fib_2, fib_1+fib_2, n-1
+        per += fib_1
+    return 4*per
+
+
+# perimeter(5)
+# 80
+
+# https://www.codewars.com/kata/54d512e62a5e54c96200019e/train/python
+def prime_factors(n):
+    div = 2
+    res = ''
+    while div <= n:
+        count = 0
+        while n%div ==0:
+            n = n//div
+            count +=1
+        if count > 0:
+            if count == 1:
+                res += f"({div})"
+            else:
+                res += f"({div}**{count})"
+        div += 1
+    return res
+
+
+prime_factors(7775460)
+# , "(2**2)(3**3)(5)(7)(11**2)(17)")
+prime_factors(7919)
+# , "(7919)")
+
+
 
 
 

@@ -755,11 +755,67 @@ def title_case(title, minor_words=''):
     pass
 
 
-title_case('')
+# title_case('')
 # , '')
-title_case('a clash of KINGS', 'a an the of')
-# , 'A Clash of Kings')
-title_case('THE WIND IN THE WILLOWS', 'The In')
+# title_case('a clash of KINGS', 'a an the of')
+# , 'A Clash of Ki/ngs')
+# title_case('THE WIND IN THE WILLOWS', 'The In')
 # , 'The Wind in the Willows')
-title_case('the quick brown fox')
+# title_case('the quick brown fox')
 # , 'The Quick Brown Fox')
+
+# https://www.codewars.com/kata/534d2f5b5371ecf8d2000a08/train/python
+def multiplication_table(size):
+    arr = []
+    arr_1 = list(range(1, size+1))
+    for i in range(1, size+1):
+        arr_temp = [x*i for x in arr_1]
+        arr.append(arr_temp)
+    return arr
+
+multiplication_table(3)
+
+# https://www.codewars.com/kata/51e0007c1f9378fa810002a9
+def parse(data):
+    print(list(data))
+    arr = []
+    y = 0
+    for x in list(data):
+        if x == 'i': y += 1
+        elif x == 'd': y -= 1
+        elif x == 's': y *= y
+        elif x == 'o': arr.append(y)
+    return arr
+
+# parse("ooo")
+# , [0, 0, 0])
+# parse("ioioio")
+# , [1, 2, 3])
+# parse("idoiido")
+# , [0, 1])
+# parse("isoisoiso")
+# , [1, 4, 25])
+# parse("codewars")
+# , [0])
+
+# https://www.codewars.com/kata/54dc6f5a224c26032800005c/train/python
+def stock_list(list_of_art, list_of_cat):
+    if list_of_art == [] or list_of_cat == []:
+        return ''
+    arr = [(x[0], int(x.split()[1])) for x in list_of_art]
+    return ' - '.join([f'({x} : {sum(y[-1] for y in arr if y[0]==x )})' for x in list_of_cat])
+
+
+
+    pass
+
+
+b = ["BBAR 150", "CDXE 515", "BKWR 250", "BTSQ 890", "DRTY 600"]
+c = ["A", "B", "C", "D"]
+stock_list(b, c)
+# , "(A : 0) - (B : 1290) - (C : 515) - (D : 600)")
+
+a = ["ABAR 200", "CDXE 500", "BKWR 250", "BTSQ 890", "DRTY 600"]
+d = ["A", "B"]
+stock_list(a, d)
+# , "(A : 200) - (B : 1140)")
