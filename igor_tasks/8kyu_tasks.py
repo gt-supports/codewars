@@ -145,3 +145,15 @@ def bmi(weight, height):
                 negative_sum += num
 
         return [positive_count, negative_sum]
+
+
+# https://www.codewars.com/kata/53dc23c68a0c93699800041d/train/python
+
+def smash(words):
+    return ' '.join(words)
+
+
+# https://www.codewars.com/kata/5a00e05cc374cb34d100000d/train/python
+
+def reverse_seq(n):
+    return list(range(n, 0, -1))
