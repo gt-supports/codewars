@@ -391,3 +391,29 @@ def words_to_marks(s):
     print(ord("a")-96)
 
 words_to_marks('attitude')
+
+# https://www.codewars.com/kata/5a03b3f6a1c9040084001765/train/python
+def angle(n):
+    return 180 * (n-2)
+
+# https://www.codewars.com/kata/556196a6091a7e7f58000018/train/python
+def largest_pair_sum(numbers):
+    return sum(sorted(numbers)[-2:])
+
+
+# largest_pair_sum([99, 2, 2, 23, 19])
+
+# https://www.codewars.com/kata/580a4734d6df748060000045/train/python
+def is_sorted_and_how(arr):
+    return "yes, ascending" if arr == sorted(arr) else "yes, descending" if arr == sorted(arr)[::-1] else "no"
+
+# https://www.codewars.com/kata/59377c53e66267c8f6000027/train/python
+def alphabet_war(fight):
+    d_l = {"w": 4, "p": 3, "b": 2, "s": 1}
+    d_r = {"m": 4, "q": 3, "d": 2, "z": 1}
+    r_sum = sum(d_r[x] for x in fight if x in d_r)
+    l_sum = sum(d_l[x] for x in fight if x in d_l)
+    return "Right side wins!" if r_sum > l_sum else "Left side wins!" if r_sum < l_sum else "Let's fight again!"
+
+alphabet_war("zzzzsa")
+
