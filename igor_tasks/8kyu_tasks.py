@@ -157,3 +157,16 @@ def smash(words):
 
 def reverse_seq(n):
     return list(range(n, 0, -1))
+
+
+# https://www.codewars.com/kata/5513795bd3fafb56c200049e/train/python
+
+def count_by(x, n):
+    return list(range(x, (x * n) + 1, x))
+
+
+# https://www.codewars.com/kata/5861d28f124b35723e00005e/train/python
+
+def zero_fuel(distance_to_pump, mpg, fuel_left):
+    max_distance = mpg * fuel_left
+    return max_distance >= distance_to_pump
