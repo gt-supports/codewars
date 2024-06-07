@@ -170,3 +170,19 @@ def count_by(x, n):
 def zero_fuel(distance_to_pump, mpg, fuel_left):
     max_distance = mpg * fuel_left
     return max_distance >= distance_to_pump
+
+
+# https://www.codewars.com/kata/577a98a6ae28071780000989/train/python
+
+def minimum(arr):
+    return min(arr)
+
+
+def maximum(arr):
+    return max(arr)
+
+
+# https://www.codewars.com/kata/51c8991dee245d7ddf00000e/train/python
+
+def reverse_words(s):
+    return " ".join(reversed(list(s.split())))
