@@ -415,5 +415,38 @@ def alphabet_war(fight):
     l_sum = sum(d_l[x] for x in fight if x in d_l)
     return "Right side wins!" if r_sum > l_sum else "Left side wins!" if r_sum < l_sum else "Let's fight again!"
 
-alphabet_war("zzzzsa")
+# alphabet_war("zzzzsa")
 
+
+# https://www.codewars.com/kata/51fd6bc82bc150b28e0000ce
+def no_odds(values):
+    return [x for x in values if x%2==0]
+
+# https://www.codewars.com/kata/5a431c0de1ce0ec33a00000c/train/python
+def even_numbers(arr,n):
+    return [x for x in arr if x % 2 == 0][-n:]
+
+# https://www.codewars.com/kata/5aff237c578a14752d0035ae/train/python
+def predict_age(age_1, age_2, age_3, age_4, age_5, age_6, age_7, age_8):
+    return (age_1**2+age_2**2+age_3**2+age_4**2+age_5**2+age_6**2+age_7**2+age_8**2)**0.5//2
+    # your code
+
+# https://www.codewars.com/kata/57ed30dde7728215300005fa/train/python
+def bumps(road):
+    return "Woohoo!" if list(road).count("n") < 16 else "Car Dead"
+
+# https://www.codewars.com/kata/5a4138acf28b82aa43000117/train/python
+def adjacent_element_product(array):
+    max_p = array[0] * array[1]
+    for i in range(1, len(array)-2):
+        max_p = max(max_p, array[i]*array[i+1])
+    print(max_p)
+    return max_p
+
+
+# adjacent_element_product([-23, 4, -5, 99, -27, 329, -2, 7, -921])
+# , -14)
+
+# https://www.codewars.com/kata/5300901726d12b80e8000498/train/python
+def fizzbuzz(n):
+    return ["FizzBuzz" if x % 15 == 0 else "Fizz" if x%3 == 0 else "Buzz" if x%5 == 0 else x for x in range(1,n+1)]

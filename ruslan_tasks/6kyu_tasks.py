@@ -810,12 +810,32 @@ def stock_list(list_of_art, list_of_cat):
     pass
 
 
-b = ["BBAR 150", "CDXE 515", "BKWR 250", "BTSQ 890", "DRTY 600"]
-c = ["A", "B", "C", "D"]
-stock_list(b, c)
+# b = ["BBAR 150", "CDXE 515", "BKWR 250", "BTSQ 890", "DRTY 600"]
+# c = ["A", "B", "C", "D"]
+# stock_list(b, c)
 # , "(A : 0) - (B : 1290) - (C : 515) - (D : 600)")
 
-a = ["ABAR 200", "CDXE 500", "BKWR 250", "BTSQ 890", "DRTY 600"]
-d = ["A", "B"]
-stock_list(a, d)
+# a = ["ABAR 200", "CDXE 500", "BKWR 250", "BTSQ 890", "DRTY 600"]
+# d = ["A", "B"]
+# stock_list(a, d)
 # , "(A : 200) - (B : 1140)")
+
+# https://www.codewars.com/kata/52761ee4cffbc69732000738
+def good_vs_evil(good, evil):
+    g = [1, 2, 3, 3, 4, 10]
+    e = [1, 2, 2, 2, 3, 5, 10]
+    sum_g = sum(int(x)*g[i] for i, x in enumerate(good.split()))
+    sum_e = sum(int(x)*e[i] for i, x in enumerate(evil.split()))
+    if sum_g > sum_e:
+        return "Battle Result: Good triumphs over Evil"
+    elif sum_g < sum_e:
+        return "Battle Result: Evil eradicates all trace of Good"
+    return "Battle Result: No victor on this battle field"
+
+
+# good_vs_evil('1 1 1 1 1 1', '1 1 1 1 1 1 1')
+# ,  'Battle Result: Evil eradicates all trace of Good')
+# good_vs_evil('0 0 0 0 0 10', '0 1 1 1 1 0 0')
+# , 'Battle Result: Good triumphs over Evil')
+# good_vs_evil('1 0 0 0 0 0', '1 0 0 0 0 0 0')\
+    # ,  'Battle Result: No victo
