@@ -186,3 +186,15 @@ def maximum(arr):
 
 def reverse_words(s):
     return " ".join(reversed(list(s.split())))
+
+
+# https://www.codewars.com/kata/5a2be17aee1aaefe2a000151/train/python
+
+def array_plus_array(arr1, arr2):
+    return (sum(arr1)) + (sum(arr2))
+
+
+# https://www.codewars.com/kata/563e320cee5dddcf77000158/train/python
+
+def get_average(marks):
+    return int(sum(marks) / len(marks))
