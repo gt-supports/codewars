@@ -391,3 +391,62 @@ def words_to_marks(s):
     print(ord("a")-96)
 
 words_to_marks('attitude')
+
+# https://www.codewars.com/kata/5a03b3f6a1c9040084001765/train/python
+def angle(n):
+    return 180 * (n-2)
+
+# https://www.codewars.com/kata/556196a6091a7e7f58000018/train/python
+def largest_pair_sum(numbers):
+    return sum(sorted(numbers)[-2:])
+
+
+# largest_pair_sum([99, 2, 2, 23, 19])
+
+# https://www.codewars.com/kata/580a4734d6df748060000045/train/python
+def is_sorted_and_how(arr):
+    return "yes, ascending" if arr == sorted(arr) else "yes, descending" if arr == sorted(arr)[::-1] else "no"
+
+# https://www.codewars.com/kata/59377c53e66267c8f6000027/train/python
+def alphabet_war(fight):
+    d_l = {"w": 4, "p": 3, "b": 2, "s": 1}
+    d_r = {"m": 4, "q": 3, "d": 2, "z": 1}
+    r_sum = sum(d_r[x] for x in fight if x in d_r)
+    l_sum = sum(d_l[x] for x in fight if x in d_l)
+    return "Right side wins!" if r_sum > l_sum else "Left side wins!" if r_sum < l_sum else "Let's fight again!"
+
+# alphabet_war("zzzzsa")
+
+
+# https://www.codewars.com/kata/51fd6bc82bc150b28e0000ce
+def no_odds(values):
+    return [x for x in values if x%2==0]
+
+# https://www.codewars.com/kata/5a431c0de1ce0ec33a00000c/train/python
+def even_numbers(arr,n):
+    return [x for x in arr if x % 2 == 0][-n:]
+
+# https://www.codewars.com/kata/5aff237c578a14752d0035ae/train/python
+def predict_age(age_1, age_2, age_3, age_4, age_5, age_6, age_7, age_8):
+    return (age_1**2+age_2**2+age_3**2+age_4**2+age_5**2+age_6**2+age_7**2+age_8**2)**0.5//2
+    # your code
+
+# https://www.codewars.com/kata/57ed30dde7728215300005fa/train/python
+def bumps(road):
+    return "Woohoo!" if list(road).count("n") < 16 else "Car Dead"
+
+# https://www.codewars.com/kata/5a4138acf28b82aa43000117/train/python
+def adjacent_element_product(array):
+    max_p = array[0] * array[1]
+    for i in range(1, len(array)-2):
+        max_p = max(max_p, array[i]*array[i+1])
+    print(max_p)
+    return max_p
+
+
+# adjacent_element_product([-23, 4, -5, 99, -27, 329, -2, 7, -921])
+# , -14)
+
+# https://www.codewars.com/kata/5300901726d12b80e8000498/train/python
+def fizzbuzz(n):
+    return ["FizzBuzz" if x % 15 == 0 else "Fizz" if x%3 == 0 else "Buzz" if x%5 == 0 else x for x in range(1,n+1)]
