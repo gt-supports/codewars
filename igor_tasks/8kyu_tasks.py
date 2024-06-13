@@ -145,3 +145,56 @@ def bmi(weight, height):
                 negative_sum += num
 
         return [positive_count, negative_sum]
+
+
+# https://www.codewars.com/kata/53dc23c68a0c93699800041d/train/python
+
+def smash(words):
+    return ' '.join(words)
+
+
+# https://www.codewars.com/kata/5a00e05cc374cb34d100000d/train/python
+
+def reverse_seq(n):
+    return list(range(n, 0, -1))
+
+
+# https://www.codewars.com/kata/5513795bd3fafb56c200049e/train/python
+
+def count_by(x, n):
+    return list(range(x, (x * n) + 1, x))
+
+
+# https://www.codewars.com/kata/5861d28f124b35723e00005e/train/python
+
+def zero_fuel(distance_to_pump, mpg, fuel_left):
+    max_distance = mpg * fuel_left
+    return max_distance >= distance_to_pump
+
+
+# https://www.codewars.com/kata/577a98a6ae28071780000989/train/python
+
+def minimum(arr):
+    return min(arr)
+
+
+def maximum(arr):
+    return max(arr)
+
+
+# https://www.codewars.com/kata/51c8991dee245d7ddf00000e/train/python
+
+def reverse_words(s):
+    return " ".join(reversed(list(s.split())))
+
+
+# https://www.codewars.com/kata/5a2be17aee1aaefe2a000151/train/python
+
+def array_plus_array(arr1, arr2):
+    return (sum(arr1)) + (sum(arr2))
+
+
+# https://www.codewars.com/kata/563e320cee5dddcf77000158/train/python
+
+def get_average(marks):
+    return int(sum(marks) / len(marks))
