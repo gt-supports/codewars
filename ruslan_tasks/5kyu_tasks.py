@@ -555,11 +555,30 @@ def prime_factors(n):
     return res
 
 
-prime_factors(7775460)
+# prime_factors(7775460)
 # , "(2**2)(3**3)(5)(7)(11**2)(17)")
-prime_factors(7919)
+# prime_factors(7919)
 # , "(7919)")
 
+
+# https://www.codewars.com/kata/55aa075506463dac6600010d/train/python
+
+def list_squared(m, n):
+    result = []
+    for i in range(m, n+1):
+        sum_sqr = 0
+        for j in range(1, int(i**0.5)+1):
+            if i % j == 0:
+                sum_sqr += j**2
+            if j != i//j:
+                sum_sqr += (i//j)**2
+        sum_root = sum_sqr ** 0.5
+        if sum_root.is_integer():
+            result.append([i, sum_sqr])
+    return result
+
+
+list_squared(1, 43)
 
 
 
