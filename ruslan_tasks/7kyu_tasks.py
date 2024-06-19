@@ -450,3 +450,35 @@ def adjacent_element_product(array):
 # https://www.codewars.com/kata/5300901726d12b80e8000498/train/python
 def fizzbuzz(n):
     return ["FizzBuzz" if x % 15 == 0 else "Fizz" if x%3 == 0 else "Buzz" if x%5 == 0 else x for x in range(1,n+1)]
+
+
+# https://www.codewars.com/kata/59a8570b570190d313000037/train/python
+def sum_cubes(n):
+    return sum(x**3 for x in range(1, n+1))
+
+# https://www.codewars.com/kata/58fa273ca6d84c158e000052/train/python
+def digits(n):
+    return len(str(n))
+
+# https://www.codewars.com/kata/535474308bb336c9980006f2/train/python
+def greet(name):
+    return f'Hello {name.capitalize()}!'
+
+# https://www.codewars.com/kata/5680781b6b7c2be860000036/train/python
+def vowel_indices(word):
+    return [i for i, x in enumerate(word, 1) if x.lower() in "aeioyu"]
+
+# vowel_indices("apple")
+
+
+# https://www.codewars.com/kata/5506b230a11c0aeab3000c1f
+def evaporator(content, evap_per_day, threshold):
+    days = 0
+    left = content
+    limit = content * threshold /100
+    while left >= limit:
+        left *= (1 - evap_per_day / 100)
+        days += 1
+    return days
+
+evaporator(10, 10, 5)
