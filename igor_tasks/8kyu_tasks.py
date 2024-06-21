@@ -198,3 +198,20 @@ def array_plus_array(arr1, arr2):
 
 def get_average(marks):
     return int(sum(marks) / len(marks))
+
+
+# https://www.codewars.com/kata/59342039eb450e39970000a6/train/python
+
+def odd_count(n):
+    return (n - 1) // 2 if n % 2 != 0 else (n - 1) // 2 + 1
+
+
+# https://www.codewars.com/kata/5966e33c4e686b508700002d/train/python
+
+def sum_str(a, b):
+    if a == "":
+        a = "0"
+    if b == "":
+        b = "0"
+
+    return str(int(a) + int(b))
