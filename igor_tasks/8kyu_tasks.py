@@ -215,3 +215,24 @@ def sum_str(a, b):
         b = "0"
 
     return str(int(a) + int(b))
+
+
+# https://www.codewars.com/kata/5ad0d8356165e63c140014d4/train/python
+
+def final_grade(exam, projects):
+    grade = 0
+
+    if exam > 90 or projects > 10:
+        grade = 100
+    elif exam > 75 and projects >= 5:
+        grade = 90
+    elif exam > 50 and projects >= 2:
+        grade = 75
+
+    return grade
+
+
+# https://www.codewars.com/kata/55edaba99da3a9c84000003b/train/python
+
+def divisible_by(numbers, divisor):
+    return [num for num in numbers if num % divisor == 0]
