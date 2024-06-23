@@ -481,4 +481,39 @@ def evaporator(content, evap_per_day, threshold):
         days += 1
     return days
 
-evaporator(10, 10, 5)
+# evaporator(10, 10, 5)
+
+# https://www.codewars.com/kata/525e5a1cb735154b320002c8
+def triangular(n):
+  return n * (n + 1) // 2 if n > 0 else 0
+
+# https://www.codewars.com/kata/534d0a229345375d520006a0/train/python
+def power_of_two(n):
+    return n>0 and (n & n - 1) ==0
+# power_of_two(73786976294838206460)
+
+# https://www.codewars.com/kata/58daa7617332e59593000006/train/
+def find_longest(arr):
+    arr_len = [len(str(x)) for x in arr]
+    idx = arr_len.index(max(arr_len))
+    return arr[idx]
+
+
+
+# find_longest([1, 10, 100, 300])
+
+# https://www.codewars.com/kata/555bfd6f9f9f52680f0000c5/train/python
+def reverse_number(n):
+    return n/abs(n)*int(str(abs(n))[::-1]) if n!=0 else 0
+
+
+# https://www.codewars.com/kata/5a523566b3bfa84c2e00010b/train/python
+def min_sum(arr):
+    sum = 0
+    for x in range(len(arr)//2):
+        max_arr = arr.pop(arr.index(max(arr)))
+        min_arr = arr.pop(arr.index(min(arr)))
+        sum += max_arr * min_arr
+    return sum
+
+min_sum([12,6,10,26,3,24])

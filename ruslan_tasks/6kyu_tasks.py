@@ -865,5 +865,23 @@ def parts_sums(ls):
 
 # ls = [1, 2, 3, 4, 5, 6]
 # parts_sums(ls)
-parts_sums([1, 2, 3, 4, 5, 6])
+# parts_sums([1, 2, 3, 4, 5, 6])
 # -> [21, 20, 18, 15, 11, 6, 0]
+
+# https://www.codewars.com/kata/56b5afb4ed1f6d5fb0000991/train/python
+def rev_rot(strng, sz):
+    result = ""
+    if sz <= 0 or strng == "":
+        return ""
+    for x in range(1, len(strng)//sz+1):
+        chunk = strng[sz*(x-1):sz*x]
+        sum_ch = sum(int(y) for y in list(chunk))
+        if sum_ch % 2 == 0:
+            result += chunk[::-1]
+        else:
+            result += chunk[1:] + chunk[0]
+    return result
+
+rev_rot("123456987654", 6)
+
+    # your code
