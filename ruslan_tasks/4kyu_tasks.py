@@ -83,16 +83,30 @@ def format_duration(s):
     return 'now' if s == 0 else ', '.join(x for x in arr_1[:len(arr_1)-1])+f' and {arr_1[-1]}' if len(arr_1) > 1 else arr_1[0]
 
 
-format_duration(0)#, "now")
-format_duration(1)#, "1 second")
-format_duration(62)#, "1 minute and 2 seconds")
-format_duration(120)#, "2 minutes")
-format_duration(3600)#, "1 hour")
-format_duration(3662)#, "1 hour, 1 minute and 2 seconds")
-format_duration(15731080)#, "182 days, 1 hour, 44 minutes and 40 seconds")
-format_duration(132030240)#, "4 years, 68 days, 3 hours and 4 minutes")
-format_duration(205851834)#, "6 years, 192 days, 13 hours, 3 minutes and 54 seconds")
-format_duration(253374061)#, "8 years, 12 days, 13 hours, 41 minutes and 1 second")
-format_duration(242062374)#, "7 years, 246 days, 15 hours, 32 minutes and 54 seconds")
-format_duration(101956166)#, "3 years, 85 days, 1 hour, 9 minutes and 26 seconds")
-format_duration(33243586)#, "1 year, 19 days, 18 hours, 19 minutes and 46 seconds")
+
+# format_duration(253374061)#, "8 years, 12 days, 13 hours, 41 minutes and 1 second")
+# format_duration(242062374)#, "7 years, 246 days, 15 hours, 32 minutes and 54 seconds")
+# format_duration(101956166)#, "3 years, 85 days, 1 hour, 9 minutes and 26 seconds")
+# format_duration(33243586)#, "1 year, 19 days, 18 hours, 19 minutes and 46 seconds")
+
+# https://www.codewars.com/kata/521c2db8ddc89b9b7a0000c1/train/python
+def snail(snail_map):
+    result = []
+    while len(snail_map)>0:
+        popped = snail_map.pop(0)
+        result += popped
+        # print(list(zip(*snail_map))[::-1])
+        new_arr =[[snail_map[x][-y] for y in range(1, len(snail_map[0])+1)] for x in range(len(snail_map))]
+        snail_map = list(zip(*new_arr))
+    return result
+
+
+
+
+
+
+
+array = [[1, 2, 3],
+         [4, 5, 6],
+         [7, 8, 9]]
+snail(array)  # => [1,2,3,6,9,8,7,4,5]
