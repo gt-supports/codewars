@@ -516,4 +516,16 @@ def min_sum(arr):
         sum += max_arr * min_arr
     return sum
 
-min_sum([12,6,10,26,3,24])
+# min_sum([12,6,10,26,3,24])
+
+# https://www.codewars.com/kata/57f759bb664021a30300007d/train/python
+def switcheroo(s):
+    return ''.join("a" if x == "b" else "b" if x == "a" else x for x in s)
+
+
+# switcheroo('aaabcccbaaa')
+# , 'bbbacccabbb')
+
+# https://www.codewars.com/kata/5783d8f3202c0e486c001d23/train/python
+def to_float_array(arr):
+    return [float(x) for x in arr]
