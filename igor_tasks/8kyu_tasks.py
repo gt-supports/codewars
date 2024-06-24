@@ -236,3 +236,22 @@ def final_grade(exam, projects):
 
 def divisible_by(numbers, divisor):
     return [num for num in numbers if num % divisor == 0]
+
+# https://www.codewars.com/kata/57f6ad55cca6e045d2000627/train/python
+
+def square_or_square_root(arr):
+    result = []
+
+    for num in arr:
+        sqrt_num = int(num ** 0.5)
+        if sqrt_num * sqrt_num == num:
+            result.append(sqrt_num)
+        else:
+            result.append(num * num)
+
+    return result
+
+# https://www.codewars.com/kata/523b623152af8a30c6000027/train/python
+
+def square(n):
+    return n * n
