@@ -237,6 +237,7 @@ def final_grade(exam, projects):
 def divisible_by(numbers, divisor):
     return [num for num in numbers if num % divisor == 0]
 
+
 # https://www.codewars.com/kata/57f6ad55cca6e045d2000627/train/python
 
 def square_or_square_root(arr):
@@ -251,7 +252,19 @@ def square_or_square_root(arr):
 
     return result
 
+
 # https://www.codewars.com/kata/523b623152af8a30c6000027/train/python
 
 def square(n):
     return n * n
+
+
+# https://www.codewars.com/kata/57cfdf34902f6ba3d300001e/train/python
+
+def two_sort(array):
+    return "***".join(sorted(array)[0])
+
+# https://www.codewars.com/kata/563a631f7cbbc236cf0000c2/train/python
+
+def move(position, roll):
+    return position + roll * 2
