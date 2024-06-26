@@ -269,3 +269,18 @@ def two_sort(array):
 
 def move(position, roll):
     return position + roll * 2
+
+
+# https://www.codewars.com/kata/57ee4a67108d3fd9eb0000e7/train/python
+
+geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
+
+
+def goose_filter(birds):
+    return [bird for bird in birds if bird not in geese]
+
+
+# https://www.codewars.com/kata/563b74ddd19a3ad462000054/train/python
+
+def stringy(size):
+    return ''.join('1' if i % 2 == 0 else '0' for i in range(size))
