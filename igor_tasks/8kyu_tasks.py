@@ -264,6 +264,7 @@ def square(n):
 def two_sort(array):
     return "***".join(sorted(array)[0])
 
+
 # https://www.codewars.com/kata/563a631f7cbbc236cf0000c2/train/python
 
 def move(position, roll):
