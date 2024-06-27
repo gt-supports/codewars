@@ -284,3 +284,18 @@ def goose_filter(birds):
 
 def stringy(size):
     return ''.join('1' if i % 2 == 0 else '0' for i in range(size))
+
+
+# https://www.codewars.com/kata/57089707fe2d01529f00024a/train/python
+
+def check_alive(health):
+    if health <= 0:
+        return False
+    else:
+        return True
+
+
+# https://www.codewars.com/kata/5ae62fcf252e66d44d00008e/train/python
+
+def expression_matter(a, b, c):
+    return max(a + b + c, a * b * c, a * (b + c), (a + b) * c)
